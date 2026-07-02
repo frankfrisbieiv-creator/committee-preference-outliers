@@ -87,18 +87,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#the-claim-being-tested" id="toc-the-claim-being-tested" class="nav-link active" data-scroll-target="#the-claim-being-tested">The claim being tested</a></li>
-  <li><a href="#the-headline-result" id="toc-the-headline-result" class="nav-link" data-scroll-target="#the-headline-result">The headline result</a></li>
-  <li><a href="#where-the-numbers-come-from" id="toc-where-the-numbers-come-from" class="nav-link" data-scroll-target="#where-the-numbers-come-from">Where the numbers come from</a>
+  <li><a href="#first-pass-v1-committees-look-like-the-chamber" id="toc-first-pass-v1-committees-look-like-the-chamber" class="nav-link" data-scroll-target="#first-pass-v1-committees-look-like-the-chamber">First pass (v1): committees look like the chamber</a></li>
+  <li><a href="#the-limitation-i-flagged-that-null-is-conservative" id="toc-the-limitation-i-flagged-that-null-is-conservative" class="nav-link" data-scroll-target="#the-limitation-i-flagged-that-null-is-conservative">The limitation I flagged: that null is conservative</a></li>
+  <li><a href="#sharper-test-v2-hold-party-composition-fixed" id="toc-sharper-test-v2-hold-party-composition-fixed" class="nav-link" data-scroll-target="#sharper-test-v2-hold-party-composition-fixed">Sharper test (v2): hold party composition fixed</a>
   <ul class="collapse">
-  <li><a href="#completeness-was-gated-before-any-analysis" id="toc-completeness-was-gated-before-any-analysis" class="nav-link" data-scroll-target="#completeness-was-gated-before-any-analysis">Completeness was gated before any analysis</a></li>
+  <li><a href="#confirmatory-conclusion-h1-is-still-not-supported" id="toc-confirmatory-conclusion-h1-is-still-not-supported" class="nav-link" data-scroll-target="#confirmatory-conclusion-h1-is-still-not-supported">Confirmatory conclusion: H1 is <em>still</em> not supported</a></li>
+  <li><a href="#v1-vs-v2-side-by-side" id="toc-v1-vs-v2-side-by-side" class="nav-link" data-scroll-target="#v1-vs-v2-side-by-side">v1 vs v2, side by side</a></li>
   </ul></li>
-  <li><a href="#the-test-exactly-as-pre-registered" id="toc-the-test-exactly-as-pre-registered" class="nav-link" data-scroll-target="#the-test-exactly-as-pre-registered">The test, exactly as pre-registered</a>
-  <ul class="collapse">
-  <li><a href="#per-committee-outlier-rates" id="toc-per-committee-outlier-rates" class="nav-link" data-scroll-target="#per-committee-outlier-rates">Per-committee outlier rates</a></li>
-  <li><a href="#aggregate-test-of-h1-predicted-vs.-not-predicted-reported-both-ways" id="toc-aggregate-test-of-h1-predicted-vs.-not-predicted-reported-both-ways" class="nav-link" data-scroll-target="#aggregate-test-of-h1-predicted-vs.-not-predicted-reported-both-ways">Aggregate test of H1: predicted vs.&nbsp;not-predicted, reported both ways</a></li>
-  </ul></li>
-  <li><a href="#an-honest-limitation-the-null-is-permissive" id="toc-an-honest-limitation-the-null-is-permissive" class="nav-link" data-scroll-target="#an-honest-limitation-the-null-is-permissive">An honest limitation: the null is permissive</a></li>
-  <li><a href="#what-this-does-and-doesnt-show" id="toc-what-this-does-and-doesnt-show" class="nav-link" data-scroll-target="#what-this-does-and-doesnt-show">What this does and doesn’t show</a></li>
+  <li><a href="#exploratory-a-party-asymmetric-sort-hiding-under-a-central-median" id="toc-exploratory-a-party-asymmetric-sort-hiding-under-a-central-median" class="nav-link" data-scroll-target="#exploratory-a-party-asymmetric-sort-hiding-under-a-central-median">Exploratory: a party-asymmetric sort hiding under a central median</a></li>
+  <li><a href="#the-load-bearing-caveat" id="toc-the-load-bearing-caveat" class="nav-link" data-scroll-target="#the-load-bearing-caveat">The load-bearing caveat</a></li>
+  <li><a href="#the-gate-still-passes-both-versions" id="toc-the-gate-still-passes-both-versions" class="nav-link" data-scroll-target="#the-gate-still-passes-both-versions">The gate still passes (both versions)</a></li>
   <li><a href="#the-one-line-read" id="toc-the-one-line-read" class="nav-link" data-scroll-target="#the-one-line-read">The one-line read</a></li>
   <li><a href="#reproduce-this" id="toc-reproduce-this" class="nav-link" data-scroll-target="#reproduce-this">Reproduce this</a></li>
   </ul>
@@ -111,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Are the Committees Everyone Calls ‘Captured’ Actually Preference Outliers?</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
-<p class="subtitle lead">A pre-registered replication of Krehbiel (1990) on modern data, 103rd–117th Congress</p>
+<p class="subtitle lead">A pre-registered replication of Krehbiel (1990) on modern data — first pass and a sharper party-stratified re-test, 103rd–117th Congress</p>
 </div>
 
 
@@ -143,7 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr); <span class="fu">library</span>(readr); <span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr); <span class="fu">library</span>(readr); <span class="fu">library</span>(ggplot2); <span class="fu">library</span>(tidyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"R/00_shared.R"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>ideology <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ideology.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
@@ -151,75 +149,309 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                                           <span class="at">show_col_types =</span> <span class="cn">FALSE</span>))</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>comp     <span class="ot">&lt;-</span> <span class="fu">completeness_table</span>(assign, ideology)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Per committee-Congress test results are produced (seeded) by R/03_analysis.R.</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>results   <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/committee_results.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>agg_a     <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(results)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>results_b <span class="ot">&lt;-</span> results <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span>(chamber <span class="sc">==</span> <span class="st">"Senate"</span> <span class="sc">&amp;</span> congress <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">103</span>, <span class="dv">108</span>)))</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>agg_b     <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(results_b)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>per_comm <span class="ot">&lt;-</span> results <span class="sc">|&gt;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(group, chamber, label) <span class="sc">|&gt;</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">outlier_rate =</span> <span class="fu">mean</span>(outlier),</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_abs_disp =</span> <span class="fu">mean</span>(abs_displacement),</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_signed_disp =</span> <span class="fu">mean</span>(displacement), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>pred_absrange <span class="ot">&lt;-</span> per_comm <span class="sc">|&gt;</span> <span class="fu">filter</span>(group <span class="sc">==</span> <span class="st">"predicted"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(mean_abs_disp) <span class="sc">|&gt;</span> <span class="fu">range</span>()</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>overall_rate  <span class="ot">&lt;-</span> <span class="fu">mean</span>(results<span class="sc">$</span>outlier)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>rules_disp    <span class="ot">&lt;-</span> per_comm <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Rules"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(mean_abs_disp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># --- v1: unconstrained-null results (produced by R/03_analysis.R) ------------</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>v1        <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/committee_results.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>agg_v1    <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(v1)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>v1_b      <span class="ot">&lt;-</span> v1 <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span>(chamber <span class="sc">==</span> <span class="st">"Senate"</span> <span class="sc">&amp;</span> congress <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">103</span>, <span class="dv">108</span>)))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>agg_v1_b  <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(v1_b)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>per_comm  <span class="ot">&lt;-</span> v1 <span class="sc">|&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(group, chamber, label) <span class="sc">|&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">outlier_rate =</span> <span class="fu">mean</span>(outlier), <span class="at">mean_abs_disp =</span> <span class="fu">mean</span>(abs_displacement),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_signed_disp =</span> <span class="fu">mean</span>(displacement), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>pred_absrange <span class="ot">&lt;-</span> per_comm <span class="sc">|&gt;</span> <span class="fu">filter</span>(group <span class="sc">==</span> <span class="st">"predicted"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(mean_abs_disp) <span class="sc">|&gt;</span> <span class="fu">range</span>()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>overall_rate  <span class="ot">&lt;-</span> <span class="fu">mean</span>(v1<span class="sc">$</span>outlier)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>rules_disp    <span class="ot">&lt;-</span> per_comm <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Rules"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(mean_abs_disp)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># --- v2: party-stratified results (produced by R/04_analysis_v2.R) -----------</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>res_v2   <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/committee_results_v2.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>primary  <span class="ot">&lt;-</span> res_v2 <span class="sc">|&gt;</span> <span class="fu">filter</span>(test <span class="sc">==</span> <span class="st">"stratified_primary"</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>wp       <span class="ot">&lt;-</span> res_v2 <span class="sc">|&gt;</span> <span class="fu">filter</span>(test <span class="sc">==</span> <span class="st">"within_party"</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>agg_v2   <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(primary)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Confirmatory within-party aggregate: predicted vs not-predicted outlier rate,</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># label-permutation on the difference (mirrors R/05_wp_tests_v2.R exactly).</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>perm_diff <span class="ot">&lt;-</span> <span class="cf">function</span>(d, <span class="at">n_perm =</span> N_PERM, <span class="at">seed =</span> SEED) {</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(seed)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  pr <span class="ot">&lt;-</span> d<span class="sc">$</span>group <span class="sc">==</span> <span class="st">"predicted"</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  obs <span class="ot">&lt;-</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[pr]) <span class="sc">-</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[<span class="sc">!</span>pr])</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(d); npred <span class="ot">&lt;-</span> <span class="fu">sum</span>(pr)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  perm <span class="ot">&lt;-</span> <span class="fu">replicate</span>(n_perm, { idx <span class="ot">&lt;-</span> <span class="fu">sample</span>(n, npred)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mean</span>(d<span class="sc">$</span>outlier[idx]) <span class="sc">-</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[<span class="sc">-</span>idx]) })</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">rate_pred =</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[pr]), <span class="at">rate_not =</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[<span class="sc">!</span>pr]),</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>       <span class="at">diff =</span> obs,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>       <span class="at">p_1sided =</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">sum</span>(perm <span class="sc">&gt;=</span> obs)) <span class="sc">/</span> (n_perm <span class="sc">+</span> <span class="dv">1</span>),</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>       <span class="at">p_2sided =</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">sum</span>(<span class="fu">abs</span>(perm) <span class="sc">&gt;=</span> <span class="fu">abs</span>(obs))) <span class="sc">/</span> (n_perm <span class="sc">+</span> <span class="dv">1</span>))</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>wp_all <span class="ot">&lt;-</span> <span class="fu">perm_diff</span>(wp)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>wp_D   <span class="ot">&lt;-</span> <span class="fu">perm_diff</span>(wp <span class="sc">|&gt;</span> <span class="fu">filter</span>(stratum <span class="sc">==</span> <span class="st">"D"</span>))</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>wp_R   <span class="ot">&lt;-</span> <span class="fu">perm_diff</span>(wp <span class="sc">|&gt;</span> <span class="fu">filter</span>(stratum <span class="sc">==</span> <span class="st">"R"</span>))</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>named_disp <span class="ot">&lt;-</span> wp <span class="sc">|&gt;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>((label <span class="sc">==</span> <span class="st">"House Agriculture"</span>    <span class="sc">&amp;</span> stratum <span class="sc">==</span> <span class="st">"D"</span>) <span class="sc">|</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>         (label <span class="sc">==</span> <span class="st">"House Armed Services"</span> <span class="sc">&amp;</span> stratum <span class="sc">==</span> <span class="st">"D"</span>) <span class="sc">|</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>         (label <span class="sc">==</span> <span class="st">"House Appropriations"</span> <span class="sc">&amp;</span> stratum <span class="sc">==</span> <span class="st">"R"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(label, stratum) <span class="sc">|&gt;</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">rate =</span> <span class="fu">mean</span>(outlier), <span class="at">signed =</span> <span class="fu">mean</span>(displacement), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>d_ag <span class="ot">&lt;-</span> named_disp <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Agriculture"</span>)    <span class="sc">|&gt;</span> <span class="fu">pull</span>(signed)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>d_as <span class="ot">&lt;-</span> named_disp <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Armed Services"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(signed)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>r_as <span class="ot">&lt;-</span> named_disp <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Armed Services"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(rate)</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>d_ap <span class="ot">&lt;-</span> named_disp <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Appropriations"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(signed)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <section id="the-claim-being-tested" class="level2">
 <h2 class="anchored" data-anchor-id="the-claim-being-tested">The claim being tested</h2>
-<p>One of the oldest ideas in the study of Congress is that committees are <strong>captured</strong>: that Agriculture is run by farm-state members, Armed Services by hawks and defense districts, the interior/lands committees by Western resource interests — each a cluster of <strong>preference outliers</strong> who don’t look like the chamber as a whole. That’s the distributive, “gains-from-trade” story (Shepsle–Weingast). Keith Krehbiel’s <em>Are Committees Composed of Preference Outliers?</em> (APSR 1990) put it to a direct test and largely found <strong>no</strong>: committees look like the floor.</p>
-<p>This is a small, deliberately narrow, <strong>pre-registered</strong> replication of that specific measurable claim on modern data (1993–2022): <strong>do the committees distributive theory names sit measurably off the chamber median more often than chance, and more often than a control set?</strong></p>
+<p>One of the oldest ideas in the study of Congress is that committees are <strong>captured</strong>: Agriculture run by farm-state members, Armed Services by hawks and defense districts, the interior/lands committees by Western resource interests — each a cluster of <strong>preference outliers</strong> who don’t look like the chamber as a whole. That’s the distributive, “gains-from-trade” story (Shepsle–Weingast). Keith Krehbiel’s <em>Are Committees Composed of Preference Outliers?</em> (APSR 1990) put it to a direct test and largely found <strong>no</strong>: committees look like the floor.</p>
+<p>This is a small, deliberately narrow, <strong>pre-registered</strong> replication of that measurable claim on modern data (1993–2022): <strong>do the committees distributive theory names sit measurably off the chamber median more often than chance, and more often than a control set?</strong> The page walks the full arc — a first pass, a limitation I flagged in advance, and the sharper re-test I pre-committed to.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>This analysis was pre-registered
+<span class="screen-reader-only">Note</span>This analysis was pre-registered — twice
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The hypothesis, the exact committee classification, the sample window, and the test were frozen in <a href="PRE_REGISTRATION.md"><code>PRE_REGISTRATION.md</code></a> <strong>before any committee–ideology join was run or seen</strong>. A result consistent with the null (committees mirror the chamber) was committed in advance to count as a finding, not a failure.</p>
+<p>The hypothesis, committee classification, sample window, and test were frozen in <a href="PRE_REGISTRATION.md"><code>PRE_REGISTRATION.md</code></a> <strong>before any committee–ideology join was run</strong>. The permissive null’s sharper successor — the <strong>party-stratified</strong> re-test below — was <em>named in that same document</em> (§7.3) and its exact construction frozen in <code>PRE_REGISTRATION_v2.md</code> <strong>before it was run</strong>. A result consistent with the null was committed in advance to count as a finding, not a failure.</p>
 </div>
 </div>
 </section>
-<section id="the-headline-result" class="level2">
-<h2 class="anchored" data-anchor-id="the-headline-result">The headline result</h2>
-<p><strong>H1 is not supported.</strong> The committees distributive theory says should be captured — Agriculture, Armed Services, Natural Resources / Energy, Transportation / Commerce — sit essentially <strong>on top of</strong> their chamber’s median. Their committee medians are displaced from the floor by only about <strong>0.04–0.10</strong> on the −1…+1 DW-NOMINATE scale — tiny. Across every committee and Congress in scope, the permutation test flags a significant median outlier only <strong>0.8%</strong> of the time, <em>below</em> the 5% rate you’d expect by chance alone.</p>
-<p>This is Krehbiel’s 1990 result, replicated on 2020s data: <strong>the committees everyone assumes are captured look like the chamber.</strong></p>
+<section id="first-pass-v1-committees-look-like-the-chamber" class="level2">
+<h2 class="anchored" data-anchor-id="first-pass-v1-committees-look-like-the-chamber">First pass (v1): committees look like the chamber</h2>
+<p>The pre-registered test, for each committee × Congress: compute the committee median and the chamber median (DW-NOMINATE dim 1); run a <strong>two-sided, 10,000-draw permutation test</strong> — draw random chamber subsets equal in size to the committee, and flag the committee as a <em>median outlier</em> if its observed median falls outside the central 95% of the null distribution; record signed displacement (committee − chamber).</p>
+<p><strong>H1 was not supported.</strong> The committees distributive theory says should be captured sit essentially <strong>on top of</strong> their chamber’s median — displaced by only about <strong>0.04–0.10</strong> on the −1…+1 DW-NOMINATE scale. Across every committee and Congress in scope the test flags a median outlier only <strong>0.8%</strong> of the time — <em>below</em> the 5% you’d expect by chance. The predicted set is an outlier no more often than the control set (difference +0.000, one-sided <em>p</em> = 0.76).</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make_displacement_plot</span>(results)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make_displacement_plot</span>(v1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="report_files/figure-html/figure-1.png" class="img-fluid figure-img" width="864"></p>
+<p><img src="report_files/figure-html/figure-v1-1.png" class="img-fluid figure-img" width="864"></p>
 </figure>
 </div>
 </div>
 </div>
+<p><em>(The join was gated at ≥98% completeness per chamber-Congress before any analysis; a party-switcher ICPSR crosswalk for three members clears it. Details are in the <a href="report_v1.html">archived first-pass report</a> and carry over unchanged — see “the gate still passes” below.)</em></p>
 </section>
-<section id="where-the-numbers-come-from" class="level2">
-<h2 class="anchored" data-anchor-id="where-the-numbers-come-from">Where the numbers come from</h2>
-<p>Every number traces to a public source, joined on ICPSR ID × Congress:</p>
-<ul>
-<li><strong>Committee rosters</strong> — Stewart &amp; Woon, <em>Congressional Committee Assignments</em> (Harvard Dataverse <code>congdata</code>): House <code>10.7910/DVN/XLIHUC</code>, Senate <code>10.7910/DVN/EQ6KC7</code>. Standing committees only; non-voting delegates excluded.</li>
-<li><strong>Member ideology</strong> — voteview.com <code>HSall_members.csv</code>, DW-NOMINATE 1st dimension.</li>
-</ul>
-<section id="completeness-was-gated-before-any-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="completeness-was-gated-before-any-analysis">Completeness was gated before any analysis</h3>
-<p>Following the discipline of the prior project, the pipeline computes the DW-NOMINATE match rate for committee members <strong>per chamber-Congress and halts if any cell falls below 98%</strong> — it refuses to analyze a partial join.</p>
+<section id="the-limitation-i-flagged-that-null-is-conservative" class="level2">
+<h2 class="anchored" data-anchor-id="the-limitation-i-flagged-that-null-is-conservative">The limitation I flagged: that null is conservative</h2>
+<p>I pre-committed to naming a weakness in v1’s own terms. Its permutation null draws <strong>unconstrained</strong> random subsets of the chamber. But real committees are built to roughly mirror the chamber’s <strong>party ratio</strong>; unconstrained draws can be far more party-lopsided than any real committee, which <strong>inflates the spread of the null</strong>. A wider null makes real committee medians look central and pushes the outlier rate <em>below</em> the 5% floor — exactly the sub-chance rate seen above. So v1’s “not outliers” holds only <em>against a null tilted toward finding nothing</em>.</p>
+<p>The tell was already in v1: the single largest displacement belongs to <strong>House Rules</strong> (mean |displacement| 0.163) — in the <em>control</em> group, unrepresentative because <strong>leadership packs it</strong>, a party-structural effect, not constituency demand. That is exactly the kind of party structure a party-blind null mishandles.</p>
+</section>
+<section id="sharper-test-v2-hold-party-composition-fixed" class="level2">
+<h2 class="anchored" data-anchor-id="sharper-test-v2-hold-party-composition-fixed">Sharper test (v2): hold party composition fixed</h2>
+<p>The pre-registered fix conditions on party. For each committee × Congress, v2 keeps the committee’s <strong>exact D/R counts</strong> and samples <em>within each party</em> from that chamber’s members of that party (10,000 draws), then takes the drawn committee’s overall median. Same sample, same classification, same gate — only the null is sharpened. If v1’s verdict were an artifact of a permissive null, this is where it breaks.</p>
+<section id="confirmatory-conclusion-h1-is-still-not-supported" class="level3">
+<h3 class="anchored" data-anchor-id="confirmatory-conclusion-h1-is-still-not-supported">Confirmatory conclusion: H1 is <em>still</em> not supported</h3>
+<p>Tightening the null does not rescue the hypothesis. Under the party-stratified null the predicted-vs-not difference in overall-median outlier rate is +0.025 (one-sided <em>p</em> = 0.27, two-sided <em>p</em> = 0.54). The pre-registered <strong>confirmatory secondary</strong> — the within-party delegation test, pooled across parties — agrees: the predicted set’s within-party outlier rate exceeds the control set’s by only +0.061 (<strong>two-sided <em>p</em> = 0.062</strong>; one-sided <em>p</em> = 0.034). Reading the two-sided value as primary, that is <strong>marginal at best and does not clear 0.05</strong> — not evidence for H1.</p>
+<p><strong>The committees everyone calls captured look like their chamber at the median — under both the permissive and the sharp null.</strong></p>
+</section>
+<section id="v1-vs-v2-side-by-side" class="level3">
+<h3 class="anchored" data-anchor-id="v1-vs-v2-side-by-side">v1 vs v2, side by side</h3>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>comp <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">Chamber =</span> chamber, <span class="at">Congress =</span> congress, <span class="at">Members =</span> members,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">Matched =</span> matched, <span class="st">`</span><span class="at">Match rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(match_rate, <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mk <span class="ot">&lt;-</span> <span class="cf">function</span>(a, tag) <span class="fu">tibble</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Null =</span> tag,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Outlier rate (pred)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>rate_pred, <span class="dv">3</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Outlier rate (not)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>rate_not, <span class="dv">3</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>d_rate, <span class="dv">3</span>),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">p (rate, 2-sided)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>p_rate_twosided, <span class="dv">3</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Mean |disp| (pred)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>md_pred, <span class="dv">3</span>),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Mean |disp| (not)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>md_not, <span class="dv">3</span>),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ |disp|</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>d_md, <span class="dv">3</span>))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mk</span>(agg_v1, <span class="st">"v1 — unconstrained"</span>),</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mk</span>(agg_v2, <span class="st">"v2 — party-stratified"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 4%">
+<col style="width: 11%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Null</th>
+<th style="text-align: right;">Outlier rate (pred)</th>
+<th style="text-align: right;">Outlier rate (not)</th>
+<th style="text-align: right;">Δ rate</th>
+<th style="text-align: right;">p (rate, 2-sided)</th>
+<th style="text-align: right;">Mean |disp| (pred)</th>
+<th style="text-align: right;">Mean |disp| (not)</th>
+<th style="text-align: right;">Δ |disp|</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">v1 — unconstrained</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">0.064</td>
+<td style="text-align: right;">0.085</td>
+<td style="text-align: right;">-0.021</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">v2 — party-stratified</td>
+<td style="text-align: right;">0.058</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">0.025</td>
+<td style="text-align: right;">0.539</td>
+<td style="text-align: right;">0.064</td>
+<td style="text-align: right;">0.085</td>
+<td style="text-align: right;">-0.021</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The stratified null does exactly what it should to the <strong>rates</strong>: flags rise (the null is narrower) — predicted 0.8% → 5.8% — yet the predicted set still isn’t flagged <em>more than the control set</em> at conventional significance. And <strong>mean |displacement| is identical across the rows</strong> (predicted 0.064, control 0.085): displacement is committee-median − chamber-median, a fixed quantity independent of the null. Only the <em>flagging</em> changes; the <em>magnitudes</em> were always this small.</p>
+</section>
+</section>
+<section id="exploratory-a-party-asymmetric-sort-hiding-under-a-central-median" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-a-party-asymmetric-sort-hiding-under-a-central-median">Exploratory: a party-asymmetric sort hiding under a central median</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>This section is exploratory, not confirmatory
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Everything below is <strong>post-hoc</strong>, surfaced by the within-party results — not a pre-registered directional prediction. It is reported as exploratory, exactly as the v1 House Rules observation was.</p>
+</div>
+</div>
+<p>A central <em>overall</em> median can <strong>mask</strong> structure: a committee’s two party delegations can each be pulled toward the extremes in ways that cancel. Split by party, the within-party effect is strong — and runs in <strong>opposite directions</strong> for the predicted and control sets:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Party =</span> <span class="fu">c</span>(<span class="st">"Democrats"</span>, <span class="st">"Republicans"</span>),</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Predicted outlier rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">c</span>(wp_D<span class="sc">$</span>rate_pred, wp_R<span class="sc">$</span>rate_pred), <span class="dv">3</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Not-predicted outlier rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">c</span>(wp_D<span class="sc">$</span>rate_not, wp_R<span class="sc">$</span>rate_not), <span class="dv">3</span>),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ (pred − not)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">c</span>(wp_D<span class="sc">$</span>diff, wp_R<span class="sc">$</span>diff), <span class="dv">3</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">p (2-sided)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">c</span>(wp_D<span class="sc">$</span>p_2sided, wp_R<span class="sc">$</span>p_2sided), <span class="dv">4</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 25%">
+<col style="width: 30%">
+<col style="width: 16%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Party</th>
+<th style="text-align: right;">Predicted outlier rate</th>
+<th style="text-align: right;">Not-predicted outlier rate</th>
+<th style="text-align: right;">Δ (pred − not)</th>
+<th style="text-align: right;">p (2-sided)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Democrats</td>
+<td style="text-align: right;">0.317</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">0.283</td>
+<td style="text-align: right;">1e-04</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Republicans</td>
+<td style="text-align: right;">0.058</td>
+<td style="text-align: right;">0.217</td>
+<td style="text-align: right;">-0.158</td>
+<td style="text-align: right;">8e-04</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>On the <strong>Democratic</strong> side the predicted committees’ delegations are outliers far more often than the control set’s (+0.283); on the <strong>Republican</strong> side it reverses (-0.158, driven by the control set). Pooled, these largely <strong>cancel</strong> — which is why the confirmatory pooled test is only marginal.</p>
+<p><strong>Direction, not just rate.</strong> Signed displacement is the committee’s party-delegation median − that party’s chamber-wide median (<strong>negative = more liberal</strong>):</p>
+<ul>
+<li><strong>House Agriculture Democrats</strong> sit <em>to the right</em> of other House Democrats — <strong>+0.127</strong> — in <strong>all 15 Congresses</strong>.</li>
+<li><strong>House Armed Services Democrats</strong> likewise — <strong>+0.074</strong>, in 93% of Congresses.</li>
+<li>On the control side, <strong>House Appropriations Republicans</strong> run the <em>other</em> way — <em>more liberal</em> than other Republicans — <strong>-0.087</strong> — a leadership/spending profile, not a constituency one.</li>
+</ul>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plot_df <span class="ot">&lt;-</span> wp <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(stratum <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"R"</span>), chamber <span class="sc">==</span> <span class="st">"House"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(group, label, stratum) <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">signed =</span> <span class="fu">mean</span>(displacement), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Party =</span> <span class="fu">recode</span>(stratum, <span class="at">D =</span> <span class="st">"Democratic delegation"</span>, <span class="at">R =</span> <span class="st">"Republican delegation"</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">group =</span> <span class="fu">recode</span>(group, <span class="at">predicted =</span> <span class="st">"Predicted (constituency)"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                               <span class="at">not_predicted =</span> <span class="st">"Not predicted (control)"</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(signed, <span class="fu">reorder</span>(label, signed), <span class="at">color =</span> group)) <span class="sc">+</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.4</span>, <span class="at">color =</span> <span class="st">"grey40"</span>) <span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Party) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Predicted (constituency)"</span> <span class="ot">=</span> <span class="st">"#d95f0e"</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"Not predicted (control)"</span> <span class="ot">=</span> <span class="st">"#2c7fb8"</span>)) <span class="sc">+</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Within-party sorting the overall median hides (House, 103rd–117th)"</span>,</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Committee party-delegation median − that party's chamber median, DW-NOMINATE dim 1. Right = more conservative."</span>,</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Signed within-party displacement"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">color =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="report_files/figure-html/wp-figure-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This is <em>not</em> symmetric noise: predicted committees pull their <strong>Democratic</strong> delegations right, and the sharpest control-set effect (Appropriations Republicans) pulls <strong>left</strong> for a leadership reason — the same “the control set drives any gap” pattern from v1, now visible within party.</p>
+</section>
+<section id="the-load-bearing-caveat" class="level2">
+<h2 class="anchored" data-anchor-id="the-load-bearing-caveat">The load-bearing caveat</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>DW-NOMINATE dim 1 is general ideology, not issue-specific constituency demand
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>v2 sharpens the <strong>statistical null</strong>; it does nothing for the <strong>measurement</strong> gap. Dim 1 is a member’s overall roll-call liberal–conservative position. A committee can be genuinely constituency-captured (farm, defense, water) without its members being dim-1 extremists — and a within-party shift on dim 1 is <em>consistent with</em> constituency selection but does <strong>not establish</strong> it. “Agriculture Democrats are more conservative than other Democrats” is a fact about general ideology; it is suggestive of, but not proof of, a farm-district sort. Do not let “central at the median on dim 1” become “not captured,” and do not let “shifted within party on dim 1” become “captured.” Both overreads are wrong.</p>
+</div>
+</div>
+</section>
+<section id="the-gate-still-passes-both-versions" class="level2">
+<h2 class="anchored" data-anchor-id="the-gate-still-passes-both-versions">The gate still passes (both versions)</h2>
+<p>The party-switcher ICPSR crosswalk and the ≥98% join-completeness gate carry over from v1 unchanged; the pipeline halts on any shortfall. With the crosswalk applied, all 30 chamber-Congress cells clear 98% (min 0.9826). The v1 aggregate is also identical whether the crosswalk is applied or the two affected Senate cells are dropped (Δ rate +0.000), so three people cannot be driving anything.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>comp <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">Chamber =</span> chamber, <span class="at">Congress =</span> congress, <span class="at">Members =</span> members,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">Matched =</span> matched, <span class="st">`</span><span class="at">Match rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(match_rate, <span class="dv">4</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div class="kable-table">
@@ -449,323 +681,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>On the first run the gate did its job and <strong>halted</strong>: two Senate cells (103rd, 108th) came in at 97.9%. The cause was not missing data but a <strong>linkage convention</strong> — voteview assigns a member who switches party a separate 90000-series ICPSR for their post-switch ideal point, which the Stewart–Woon file does not mirror. Three members were affected, all with valid scores under the other ID:</p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ICPSR_CROSSWALK <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">Member =</span> member, <span class="at">State =</span> state, <span class="at">Congress =</span> congress,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Stewart-Woon ICPSR</span><span class="st">`</span> <span class="ot">=</span> from_icpsr, <span class="st">`</span><span class="at">voteview ICPSR</span><span class="st">`</span> <span class="ot">=</span> to_icpsr,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Party switch</span><span class="st">`</span> <span class="ot">=</span> <span class="cf">switch</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div class="kable-table">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 28%">
-<col style="width: 6%">
-<col style="width: 10%">
-<col style="width: 21%">
-<col style="width: 17%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Member</th>
-<th style="text-align: left;">State</th>
-<th style="text-align: right;">Congress</th>
-<th style="text-align: right;">Stewart-Woon ICPSR</th>
-<th style="text-align: right;">voteview ICPSR</th>
-<th style="text-align: left;">Party switch</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Shelby, Richard C.</td>
-<td style="text-align: left;">AL</td>
-<td style="text-align: right;">103</td>
-<td style="text-align: right;">94659</td>
-<td style="text-align: right;">14659</td>
-<td style="text-align: left;">D-&gt;R (1994)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Campbell, Ben Nighthorse</td>
-<td style="text-align: left;">CO</td>
-<td style="text-align: right;">108</td>
-<td style="text-align: right;">15407</td>
-<td style="text-align: right;">95407</td>
-<td style="text-align: left;">D-&gt;R (1995)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Jeffords, James M.</td>
-<td style="text-align: left;">VT</td>
-<td style="text-align: right;">108</td>
-<td style="text-align: right;">14240</td>
-<td style="text-align: right;">94240</td>
-<td style="text-align: left;">R-&gt;I (2001)</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<p>Mapping each to their verified voteview record is a data-linkage correction, not a researcher choice over the result (documented in the <a href="PRE_REGISTRATION.md"><code>PRE_REGISTRATION.md</code></a> deviation log). Lloyd Bentsen (103rd) is <em>not</em> crosswalked — he resigned days into the Congress and is genuinely scoreless, so the gate correctly excludes him. With the crosswalk applied, all 30 chamber-Congress cells clear 98%. Crucially, the aggregate result below is <strong>identical whether the crosswalk is applied or the two affected Senate-Congress cells are dropped entirely</strong> — so three people cannot be driving anything.</p>
-</section>
-</section>
-<section id="the-test-exactly-as-pre-registered" class="level2">
-<h2 class="anchored" data-anchor-id="the-test-exactly-as-pre-registered">The test, exactly as pre-registered</h2>
-<p>For each committee × Congress: compute the committee median and the chamber median (DW-NOMINATE dim 1); run a <strong>two-sided, 10,000-draw permutation test</strong> — draw random chamber subsets equal in size to the committee, and flag the committee as a <em>median outlier</em> if its observed median falls outside the central 95% of the null distribution of random-subset medians; record signed displacement (committee − chamber).</p>
-<section id="per-committee-outlier-rates" class="level3">
-<h3 class="anchored" data-anchor-id="per-committee-outlier-rates">Per-committee outlier rates</h3>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>per_comm <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">Group =</span> group, <span class="at">Committee =</span> label,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Outlier rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(outlier_rate, <span class="dv">3</span>),</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Mean signed disp.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(mean_signed_disp, <span class="dv">3</span>),</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Mean |disp.|</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(mean_abs_disp, <span class="dv">3</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Group, <span class="fu">desc</span>(<span class="st">`</span><span class="at">Mean |disp.|</span><span class="st">`</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div class="kable-table">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 35%">
-<col style="width: 12%">
-<col style="width: 16%">
-<col style="width: 21%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Group</th>
-<th style="text-align: left;">Committee</th>
-<th style="text-align: right;">Outlier rate</th>
-<th style="text-align: right;">Mean signed disp.</th>
-<th style="text-align: right;">Mean |disp.|</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">not_predicted</td>
-<td style="text-align: left;">House Rules</td>
-<td style="text-align: right;">0.067</td>
-<td style="text-align: right;">0.046</td>
-<td style="text-align: right;">0.163</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">not_predicted</td>
-<td style="text-align: left;">Senate Budget</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.010</td>
-<td style="text-align: right;">0.111</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">not_predicted</td>
-<td style="text-align: left;">House Ways &amp; Means</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.032</td>
-<td style="text-align: right;">0.090</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">not_predicted</td>
-<td style="text-align: left;">House Budget</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.046</td>
-<td style="text-align: right;">0.086</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">not_predicted</td>
-<td style="text-align: left;">Senate Appropriations</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">-0.066</td>
-<td style="text-align: right;">0.072</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">not_predicted</td>
-<td style="text-align: left;">Senate Rules &amp; Administration</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.028</td>
-<td style="text-align: right;">0.059</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">not_predicted</td>
-<td style="text-align: left;">House Appropriations</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.001</td>
-<td style="text-align: right;">0.054</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">not_predicted</td>
-<td style="text-align: left;">Senate Finance</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.021</td>
-<td style="text-align: right;">0.047</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">predicted</td>
-<td style="text-align: left;">House Natural Resources</td>
-<td style="text-align: right;">0.067</td>
-<td style="text-align: right;">0.077</td>
-<td style="text-align: right;">0.099</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">predicted</td>
-<td style="text-align: left;">Senate Agriculture</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.075</td>
-<td style="text-align: right;">0.082</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">predicted</td>
-<td style="text-align: left;">Senate Armed Services</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.069</td>
-<td style="text-align: right;">0.074</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">predicted</td>
-<td style="text-align: left;">House Agriculture</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.066</td>
-<td style="text-align: right;">0.067</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">predicted</td>
-<td style="text-align: left;">Senate Commerce</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">-0.002</td>
-<td style="text-align: right;">0.060</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">predicted</td>
-<td style="text-align: left;">Senate Energy &amp; Natural Resources</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">-0.001</td>
-<td style="text-align: right;">0.055</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">predicted</td>
-<td style="text-align: left;">House Armed Services</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.031</td>
-<td style="text-align: right;">0.041</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">predicted</td>
-<td style="text-align: left;">House Transportation &amp; Infrastructure</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.010</td>
-<td style="text-align: right;">0.035</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="aggregate-test-of-h1-predicted-vs.-not-predicted-reported-both-ways" class="level3">
-<h3 class="anchored" data-anchor-id="aggregate-test-of-h1-predicted-vs.-not-predicted-reported-both-ways">Aggregate test of H1: predicted vs.&nbsp;not-predicted, reported both ways</h3>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mk <span class="ot">&lt;-</span> <span class="cf">function</span>(a, tag) <span class="fu">tibble</span>(</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Run =</span> tag,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Outlier rate (pred)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>rate_pred, <span class="dv">3</span>),</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Outlier rate (not)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>rate_not, <span class="dv">3</span>),</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>d_rate, <span class="dv">3</span>),</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Mean |disp| (pred)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>md_pred, <span class="dv">3</span>),</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Mean |disp| (not)</span><span class="st">`</span>   <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>md_not, <span class="dv">3</span>),</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ |disp|</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>d_md, <span class="dv">3</span>),</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">p (|disp|, 2-sided)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>p_md_twosided, <span class="dv">4</span>))</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mk</span>(agg_a, <span class="st">"Crosswalk applied (full 103–117)"</span>),</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mk</span>(agg_b, <span class="st">"Senate 103 &amp; 108 dropped"</span>)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output-display">
-<div class="kable-table">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 17%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 3%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 10%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Run</th>
-<th style="text-align: right;">Outlier rate (pred)</th>
-<th style="text-align: right;">Outlier rate (not)</th>
-<th style="text-align: right;">Δ rate</th>
-<th style="text-align: right;">Mean |disp| (pred)</th>
-<th style="text-align: right;">Mean |disp| (not)</th>
-<th style="text-align: right;">Δ |disp|</th>
-<th style="text-align: right;">p (|disp|, 2-sided)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Crosswalk applied (full 103–117)</td>
-<td style="text-align: right;">0.008</td>
-<td style="text-align: right;">0.008</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.064</td>
-<td style="text-align: right;">0.085</td>
-<td style="text-align: right;">-0.021</td>
-<td style="text-align: right;">0.0049</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Senate 103 &amp; 108 dropped</td>
-<td style="text-align: right;">0.009</td>
-<td style="text-align: right;">0.009</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.064</td>
-<td style="text-align: right;">0.086</td>
-<td style="text-align: right;">-0.022</td>
-<td style="text-align: right;">0.0063</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<p>The predicted-outlier set is a median outlier no more often than the control set (both ≈ 0.8%; the difference is +0.000, one-sided <em>p</em> = 0.76 — nowhere near supporting H1).</p>
-</section>
-</section>
-<section id="an-honest-limitation-the-null-is-permissive" class="level2">
-<h2 class="anchored" data-anchor-id="an-honest-limitation-the-null-is-permissive">An honest limitation: the null is permissive</h2>
-<p>The one aggregate difference that <em>is</em> significant runs <strong>opposite</strong> to H1: the predicted (constituency) committees are, if anything, slightly <strong>more central</strong> than the control set (mean |displacement| 0.064 vs.&nbsp;0.085; two-sided <em>p</em> = 0.005). This is <strong>not</strong> evidence against distributive theory — it is an artifact of two things that must be named plainly:</p>
-<ol type="1">
-<li><p><strong>The permutation null is conservative by construction.</strong> It draws <em>unconstrained</em> random subsets of the chamber. Real committees are built to roughly mirror the chamber’s <strong>party ratio</strong>; unconstrained random subsets can be far more party-lopsided than any real committee, which inflates the spread of the null distribution. A wider null makes real committee medians look central and pushes the outlier rate <em>below</em> the 5% chance floor. The pre-registered <strong>party-stratified null</strong> (sampling within party delegations) is the sharper instrument and is the planned <strong>v2</strong>; the “not outliers” conclusion here should be read as holding <em>against a null deliberately tilted toward finding nothing</em>.</p></li>
-<li><p><strong>The significant gap is driven by the control set, not the treatment set.</strong> The largest displacement on the board belongs to <strong>House Rules</strong> (mean |displacement| 0.163), which sits in the <em>not-predicted</em> group. Rules is unrepresentative because <strong>party leadership packs it</strong> — a party-structural effect, not a constituency-demand one. Rules was not part of the pre-registered focus, so this is an <strong>exploratory observation, not a confirmatory finding</strong>; it happens to widen the control set’s average and thereby produce the opposite-signed significant difference.</p></li>
-</ol>
-</section>
-<section id="what-this-does-and-doesnt-show" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-does-and-doesnt-show">What this does and doesn’t show</h2>
-<ul>
-<li><strong>One statistic, one dimension.</strong> This tests the <em>median</em> on DW-NOMINATE dim 1 — the classic quantity. Committees can differ from the floor in variance or on issue-specific intensity without a median shift; that is out of scope for v1.</li>
-<li><strong>The null matters.</strong> As above, the unconstrained-random null is conservative; the party-stratified secondary (v2) is the sharper test and is pre-registered.</li>
-<li><strong>Exploratory vs.&nbsp;confirmatory.</strong> The Rules/leadership observation is exploratory. The confirmatory result is the pre-registered predicted-vs-not comparison, which does not support H1.</li>
-<li><strong>Coverage ends 2022 (117th)</strong> — the Stewart–Woon modern boundary.</li>
-</ul>
 </section>
 <section id="the-one-line-read" class="level2">
 <h2 class="anchored" data-anchor-id="the-one-line-read">The one-line read</h2>
-<p>The committees everyone assumes are captured by narrow interests look like the floor; the one committee that looks unrepresentative here is the one leadership controls — House Rules — an exploratory observation, not a tested claim. Krehbiel-consistent, with a modern twist — and a sharper party-stratified test still to come.</p>
+<p>The committees everyone assumes are captured by narrow interests look like the floor at the median — and they <em>still</em> do once the null holds party composition fixed, so the pre-registered hypothesis is not supported under either test. What the sharper test surfaces, exploratorily, is a party-asymmetric within-party sort that cancels at the median: Agriculture and Armed Services Democrats sit to the right of their party in nearly every Congress. Consistent with constituency selection — but on general ideology, not issue demand, so it suggests rather than proves it. Krehbiel-consistent, with a modern twist.</p>
 </section>
 <section id="reproduce-this" class="level2">
 <h2 class="anchored" data-anchor-id="reproduce-this">Reproduce this</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/01_pull_ideology.R        <span class="co"># DW-NOMINATE, 103-117</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/02_pull_committees.R      <span class="co"># Stewart-Woon rosters + delegate flags</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/03_analysis.R             <span class="co"># gate, permutation test, aggregate</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render report.qmd            <span class="co"># rebuild this page</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Everything above regenerates from public data. Full frozen method and deviation log: <a href="PRE_REGISTRATION.md"><code>PRE_REGISTRATION.md</code></a>.</p>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/03_analysis.R             <span class="co"># v1: unconstrained-null test + aggregate</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/04_analysis_v2.R          <span class="co"># v2: party-stratified + within-party nulls</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/05_wp_tests_v2.R          <span class="co"># v2: within-party aggregate permutation tests</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render report.qmd            <span class="co"># rebuild this page</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Everything above regenerates from public data. Frozen methods and deviation logs: <a href="PRE_REGISTRATION.md"><code>PRE_REGISTRATION.md</code></a> (v1) and <code>PRE_REGISTRATION_v2.md</code> (v2). The standalone first-pass write-up is archived at <a href="report_v1.html"><code>report_v1.html</code></a>.</p>
 <!-- -->
 
 </section>
@@ -1225,7 +1154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Are the Committees Everyone Calls 'Captured' Actually Preference Outliers?"</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "A pre-registered replication of Krehbiel (1990) on modern data, 103rd–117th Congress"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "A pre-registered replication of Krehbiel (1990) on modern data — first pass and a sharper party-stratified re-test, 103rd–117th Congress"</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Frank Frisbie"</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> today</span></span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
@@ -1245,7 +1174,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup}</span></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr); <span class="fu">library</span>(readr); <span class="fu">library</span>(ggplot2)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr); <span class="fu">library</span>(readr); <span class="fu">library</span>(ggplot2); <span class="fu">library</span>(tidyr)</span>
 <span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"R/00_shared.R"</span>)</span>
 <span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>ideology <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ideology.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
@@ -1253,136 +1182,199 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>                                           <span class="at">show_col_types =</span> <span class="cn">FALSE</span>))</span>
 <span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>comp     <span class="ot">&lt;-</span> <span class="fu">completeness_table</span>(assign, ideology)</span>
 <span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Per committee-Congress test results are produced (seeded) by R/03_analysis.R.</span></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>results   <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/committee_results.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>agg_a     <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(results)</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>results_b <span class="ot">&lt;-</span> results <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span>(chamber <span class="sc">==</span> <span class="st">"Senate"</span> <span class="sc">&amp;</span> congress <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">103</span>, <span class="dv">108</span>)))</span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>agg_b     <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(results_b)</span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>per_comm <span class="ot">&lt;-</span> results <span class="sc">|&gt;</span></span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(group, chamber, label) <span class="sc">|&gt;</span></span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">outlier_rate =</span> <span class="fu">mean</span>(outlier),</span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_abs_disp =</span> <span class="fu">mean</span>(abs_displacement),</span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_signed_disp =</span> <span class="fu">mean</span>(displacement), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>pred_absrange <span class="ot">&lt;-</span> per_comm <span class="sc">|&gt;</span> <span class="fu">filter</span>(group <span class="sc">==</span> <span class="st">"predicted"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(mean_abs_disp) <span class="sc">|&gt;</span> <span class="fu">range</span>()</span>
-<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>overall_rate  <span class="ot">&lt;-</span> <span class="fu">mean</span>(results<span class="sc">$</span>outlier)</span>
-<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>rules_disp    <span class="ot">&lt;-</span> per_comm <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Rules"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(mean_abs_disp)</span>
-<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## The claim being tested</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co"># --- v1: unconstrained-null results (produced by R/03_analysis.R) ------------</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>v1        <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/committee_results.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>agg_v1    <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(v1)</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>v1_b      <span class="ot">&lt;-</span> v1 <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span>(chamber <span class="sc">==</span> <span class="st">"Senate"</span> <span class="sc">&amp;</span> congress <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">103</span>, <span class="dv">108</span>)))</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>agg_v1_b  <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(v1_b)</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>per_comm  <span class="ot">&lt;-</span> v1 <span class="sc">|&gt;</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(group, chamber, label) <span class="sc">|&gt;</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">outlier_rate =</span> <span class="fu">mean</span>(outlier), <span class="at">mean_abs_disp =</span> <span class="fu">mean</span>(abs_displacement),</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_signed_disp =</span> <span class="fu">mean</span>(displacement), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>pred_absrange <span class="ot">&lt;-</span> per_comm <span class="sc">|&gt;</span> <span class="fu">filter</span>(group <span class="sc">==</span> <span class="st">"predicted"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(mean_abs_disp) <span class="sc">|&gt;</span> <span class="fu">range</span>()</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>overall_rate  <span class="ot">&lt;-</span> <span class="fu">mean</span>(v1<span class="sc">$</span>outlier)</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>rules_disp    <span class="ot">&lt;-</span> per_comm <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Rules"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(mean_abs_disp)</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a><span class="co"># --- v2: party-stratified results (produced by R/04_analysis_v2.R) -----------</span></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>res_v2   <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/committee_results_v2.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>primary  <span class="ot">&lt;-</span> res_v2 <span class="sc">|&gt;</span> <span class="fu">filter</span>(test <span class="sc">==</span> <span class="st">"stratified_primary"</span>)</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>wp       <span class="ot">&lt;-</span> res_v2 <span class="sc">|&gt;</span> <span class="fu">filter</span>(test <span class="sc">==</span> <span class="st">"within_party"</span>)</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>agg_v2   <span class="ot">&lt;-</span> <span class="fu">aggregate_test</span>(primary)</span>
 <span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>One of the oldest ideas in the study of Congress is that committees are **captured**: that Agriculture is run by farm-state members, Armed Services by hawks and defense districts, the interior/lands committees by Western resource interests — each a cluster of **preference outliers** who don't look like the chamber as a whole. That's the distributive, "gains-from-trade" story (Shepsle–Weingast). Keith Krehbiel's *Are Committees Composed of Preference Outliers?* (APSR 1990) put it to a direct test and largely found **no**: committees look like the floor.</span>
-<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>This is a small, deliberately narrow, **pre-registered** replication of that specific measurable claim on modern data (1993–2022): **do the committees distributive theory names sit measurably off the chamber median more often than chance, and more often than a control set?**</span>
-<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a><span class="fu">## This analysis was pre-registered</span></span>
-<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>The hypothesis, the exact committee classification, the sample window, and the test were frozen in <span class="co">[</span><span class="ot">`PRE_REGISTRATION.md`</span><span class="co">](PRE_REGISTRATION.md)</span> **before any committee–ideology join was run or seen**. A result consistent with the null (committees mirror the chamber) was committed in advance to count as a finding, not a failure.</span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## The headline result</span></span>
-<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>**H1 is not supported.** The committees distributive theory says should be captured — Agriculture, Armed Services, Natural Resources / Energy, Transportation / Commerce — sit essentially **on top of** their chamber's median. Their committee medians are displaced from the floor by only about **`r sprintf("%.2f", pred_absrange[1])`–`r sprintf("%.2f", pred_absrange[2])`** on the −1…+1 DW-NOMINATE scale — tiny. Across every committee and Congress in scope, the permutation test flags a significant median outlier only **`r sprintf("%.1f%%", 100*overall_rate)`** of the time, *below* the 5% rate you'd expect by chance alone.</span>
-<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>This is Krehbiel's 1990 result, replicated on 2020s data: **the committees everyone assumes are captured look like the chamber.**</span>
-<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{r figure}</span></span>
-<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a><span class="fu">make_displacement_plot</span>(results)</span>
-<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Where the numbers come from</span></span>
-<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>Every number traces to a public source, joined on ICPSR ID × Congress:</span>
-<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Committee rosters** — Stewart &amp; Woon, *Congressional Committee Assignments* (Harvard Dataverse <span class="in">`congdata`</span>): House <span class="in">`10.7910/DVN/XLIHUC`</span>, Senate <span class="in">`10.7910/DVN/EQ6KC7`</span>. Standing committees only; non-voting delegates excluded.</span>
-<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Member ideology** — voteview.com <span class="in">`HSall_members.csv`</span>, DW-NOMINATE 1st dimension.</span>
-<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a><span class="fu">### Completeness was gated before any analysis</span></span>
-<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>Following the discipline of the prior project, the pipeline computes the DW-NOMINATE match rate for committee members **per chamber-Congress and halts if any cell falls below 98%** — it refuses to analyze a partial join.</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Confirmatory within-party aggregate: predicted vs not-predicted outlier rate,</span></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="co"># label-permutation on the difference (mirrors R/05_wp_tests_v2.R exactly).</span></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>perm_diff <span class="ot">&lt;-</span> <span class="cf">function</span>(d, <span class="at">n_perm =</span> N_PERM, <span class="at">seed =</span> SEED) {</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(seed)</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>  pr <span class="ot">&lt;-</span> d<span class="sc">$</span>group <span class="sc">==</span> <span class="st">"predicted"</span></span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>  obs <span class="ot">&lt;-</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[pr]) <span class="sc">-</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[<span class="sc">!</span>pr])</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(d); npred <span class="ot">&lt;-</span> <span class="fu">sum</span>(pr)</span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>  perm <span class="ot">&lt;-</span> <span class="fu">replicate</span>(n_perm, { idx <span class="ot">&lt;-</span> <span class="fu">sample</span>(n, npred)</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mean</span>(d<span class="sc">$</span>outlier[idx]) <span class="sc">-</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[<span class="sc">-</span>idx]) })</span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">rate_pred =</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[pr]), <span class="at">rate_not =</span> <span class="fu">mean</span>(d<span class="sc">$</span>outlier[<span class="sc">!</span>pr]),</span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>       <span class="at">diff =</span> obs,</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>       <span class="at">p_1sided =</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">sum</span>(perm <span class="sc">&gt;=</span> obs)) <span class="sc">/</span> (n_perm <span class="sc">+</span> <span class="dv">1</span>),</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>       <span class="at">p_2sided =</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">sum</span>(<span class="fu">abs</span>(perm) <span class="sc">&gt;=</span> <span class="fu">abs</span>(obs))) <span class="sc">/</span> (n_perm <span class="sc">+</span> <span class="dv">1</span>))</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>wp_all <span class="ot">&lt;-</span> <span class="fu">perm_diff</span>(wp)</span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>wp_D   <span class="ot">&lt;-</span> <span class="fu">perm_diff</span>(wp <span class="sc">|&gt;</span> <span class="fu">filter</span>(stratum <span class="sc">==</span> <span class="st">"D"</span>))</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>wp_R   <span class="ot">&lt;-</span> <span class="fu">perm_diff</span>(wp <span class="sc">|&gt;</span> <span class="fu">filter</span>(stratum <span class="sc">==</span> <span class="st">"R"</span>))</span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>named_disp <span class="ot">&lt;-</span> wp <span class="sc">|&gt;</span></span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>((label <span class="sc">==</span> <span class="st">"House Agriculture"</span>    <span class="sc">&amp;</span> stratum <span class="sc">==</span> <span class="st">"D"</span>) <span class="sc">|</span></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>         (label <span class="sc">==</span> <span class="st">"House Armed Services"</span> <span class="sc">&amp;</span> stratum <span class="sc">==</span> <span class="st">"D"</span>) <span class="sc">|</span></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>         (label <span class="sc">==</span> <span class="st">"House Appropriations"</span> <span class="sc">&amp;</span> stratum <span class="sc">==</span> <span class="st">"R"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(label, stratum) <span class="sc">|&gt;</span></span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">rate =</span> <span class="fu">mean</span>(outlier), <span class="at">signed =</span> <span class="fu">mean</span>(displacement), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>d_ag <span class="ot">&lt;-</span> named_disp <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Agriculture"</span>)    <span class="sc">|&gt;</span> <span class="fu">pull</span>(signed)</span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>d_as <span class="ot">&lt;-</span> named_disp <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Armed Services"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(signed)</span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>r_as <span class="ot">&lt;-</span> named_disp <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Armed Services"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(rate)</span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>d_ap <span class="ot">&lt;-</span> named_disp <span class="sc">|&gt;</span> <span class="fu">filter</span>(label <span class="sc">==</span> <span class="st">"House Appropriations"</span>) <span class="sc">|&gt;</span> <span class="fu">pull</span>(signed)</span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r completeness}</span></span>
-<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>comp <span class="sc">|&gt;</span></span>
-<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">Chamber =</span> chamber, <span class="at">Congress =</span> congress, <span class="at">Members =</span> members,</span>
-<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>            <span class="at">Matched =</span> matched, <span class="st">`</span><span class="at">Match rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(match_rate, <span class="dv">4</span>))</span>
-<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a><span class="fu">## The claim being tested</span></span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>One of the oldest ideas in the study of Congress is that committees are **captured**: Agriculture run by farm-state members, Armed Services by hawks and defense districts, the interior/lands committees by Western resource interests — each a cluster of **preference outliers** who don't look like the chamber as a whole. That's the distributive, "gains-from-trade" story (Shepsle–Weingast). Keith Krehbiel's *Are Committees Composed of Preference Outliers?* (APSR 1990) put it to a direct test and largely found **no**: committees look like the floor.</span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>This is a small, deliberately narrow, **pre-registered** replication of that measurable claim on modern data (1993–2022): **do the committees distributive theory names sit measurably off the chamber median more often than chance, and more often than a control set?** The page walks the full arc — a first pass, a limitation I flagged in advance, and the sharper re-test I pre-committed to.</span>
 <span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>On the first run the gate did its job and **halted**: two Senate cells (103rd, 108th) came in at 97.9%. The cause was not missing data but a **linkage convention** — voteview assigns a member who switches party a separate 90000-series ICPSR for their post-switch ideal point, which the Stewart–Woon file does not mirror. Three members were affected, all with valid scores under the other ID:</span>
-<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a><span class="in">```{r crosswalk}</span></span>
-<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>ICPSR_CROSSWALK <span class="sc">|&gt;</span></span>
-<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">Member =</span> member, <span class="at">State =</span> state, <span class="at">Congress =</span> congress,</span>
-<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Stewart-Woon ICPSR</span><span class="st">`</span> <span class="ot">=</span> from_icpsr, <span class="st">`</span><span class="at">voteview ICPSR</span><span class="st">`</span> <span class="ot">=</span> to_icpsr,</span>
-<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Party switch</span><span class="st">`</span> <span class="ot">=</span> <span class="cf">switch</span>)</span>
-<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a><span class="fu">## This analysis was pre-registered — twice</span></span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>The hypothesis, committee classification, sample window, and test were frozen in <span class="co">[</span><span class="ot">`PRE_REGISTRATION.md`</span><span class="co">](PRE_REGISTRATION.md)</span> **before any committee–ideology join was run**. The permissive null's sharper successor — the **party-stratified** re-test below — was *named in that same document* (§7.3) and its exact construction frozen in `PRE_REGISTRATION_v2.md` **before it was run**. A result consistent with the null was committed in advance to count as a finding, not a failure.</span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a><span class="fu">## First pass (v1): committees look like the chamber</span></span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>The pre-registered test, for each committee × Congress: compute the committee median and the chamber median (DW-NOMINATE dim 1); run a **two-sided, 10,000-draw permutation test** — draw random chamber subsets equal in size to the committee, and flag the committee as a *median outlier* if its observed median falls outside the central 95% of the null distribution; record signed displacement (committee − chamber).</span>
 <span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a>Mapping each to their verified voteview record is a data-linkage correction, not a researcher choice over the result (documented in the <span class="co">[</span><span class="ot">`PRE_REGISTRATION.md`</span><span class="co">](PRE_REGISTRATION.md)</span> deviation log). Lloyd Bentsen (103rd) is *not* crosswalked — he resigned days into the Congress and is genuinely scoreless, so the gate correctly excludes him. With the crosswalk applied, all 30 chamber-Congress cells clear 98%. Crucially, the aggregate result below is **identical whether the crosswalk is applied or the two affected Senate-Congress cells are dropped entirely** — so three people cannot be driving anything.</span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a>**H1 was not supported.** The committees distributive theory says should be captured sit essentially **on top of** their chamber's median — displaced by only about **`r sprintf("%.2f", pred_absrange[1])`–`r sprintf("%.2f", pred_absrange[2])`** on the −1…+1 DW-NOMINATE scale. Across every committee and Congress in scope the test flags a median outlier only **`r sprintf("%.1f%%", 100*overall_rate)`** of the time — *below* the 5% you'd expect by chance. The predicted set is an outlier no more often than the control set (difference `r sprintf("%+.3f", agg_v1$d_rate)`, one-sided *p* = <span class="in">`r sprintf("%.2f", agg_v1$p_rate_onesided)`</span>).</span>
 <span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## The test, exactly as pre-registered</span></span>
-<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>For each committee × Congress: compute the committee median and the chamber median (DW-NOMINATE dim 1); run a **two-sided, 10,000-draw permutation test** — draw random chamber subsets equal in size to the committee, and flag the committee as a *median outlier* if its observed median falls outside the central 95% of the null distribution of random-subset medians; record signed displacement (committee − chamber).</span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a><span class="in">```{r figure-v1}</span></span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a><span class="fu">make_displacement_plot</span>(v1)</span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a><span class="fu">### Per-committee outlier rates</span></span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>*(The join was gated at ≥98% completeness per chamber-Congress before any analysis; a party-switcher ICPSR crosswalk for three members clears it. Details are in the [archived first-pass report](report_v1.html) and carry over unchanged — see "the gate still passes" below.)*</span>
 <span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r per-committee}</span></span>
-<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>per_comm <span class="sc">|&gt;</span></span>
-<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">Group =</span> group, <span class="at">Committee =</span> label,</span>
-<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Outlier rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(outlier_rate, <span class="dv">3</span>),</span>
-<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Mean signed disp.</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(mean_signed_disp, <span class="dv">3</span>),</span>
-<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">Mean |disp.|</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(mean_abs_disp, <span class="dv">3</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Group, <span class="fu">desc</span>(<span class="st">`</span><span class="at">Mean |disp.|</span><span class="st">`</span>))</span>
-<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a><span class="fu">### Aggregate test of H1: predicted vs. not-predicted, reported both ways</span></span>
-<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a><span class="in">```{r aggregate}</span></span>
-<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>mk <span class="ot">&lt;-</span> <span class="cf">function</span>(a, tag) <span class="fu">tibble</span>(</span>
-<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>  <span class="at">Run =</span> tag,</span>
-<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Outlier rate (pred)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>rate_pred, <span class="dv">3</span>),</span>
-<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Outlier rate (not)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>rate_not, <span class="dv">3</span>),</span>
-<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>d_rate, <span class="dv">3</span>),</span>
-<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Mean |disp| (pred)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>md_pred, <span class="dv">3</span>),</span>
-<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Mean |disp| (not)</span><span class="st">`</span>   <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>md_not, <span class="dv">3</span>),</span>
-<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ |disp|</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>d_md, <span class="dv">3</span>),</span>
-<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">p (|disp|, 2-sided)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>p_md_twosided, <span class="dv">4</span>))</span>
-<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
-<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mk</span>(agg_a, <span class="st">"Crosswalk applied (full 103–117)"</span>),</span>
-<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mk</span>(agg_b, <span class="st">"Senate 103 &amp; 108 dropped"</span>)</span>
-<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>The predicted-outlier set is a median outlier no more often than the control set (both ≈ <span class="in">`r sprintf("%.1f%%", 100*agg_a$rate_pred)`</span>; the difference is <span class="in">`r sprintf("%+.3f", agg_a$d_rate)`</span>, one-sided *p* = <span class="in">`r sprintf("%.2f", agg_a$p_rate_onesided)`</span> — nowhere near supporting H1).</span>
-<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## An honest limitation: the null is permissive</span></span>
-<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a>The one aggregate difference that *is* significant runs **opposite** to H1: the predicted (constituency) committees are, if anything, slightly **more central** than the control set (mean |displacement| `r sprintf("%.3f", agg_a$md_pred)` vs. `r sprintf("%.3f", agg_a$md_not)`; two-sided *p* = `r sprintf("%.3f", agg_a$p_md_twosided)`). This is **not** evidence against distributive theory — it is an artifact of two things that must be named plainly:</span>
-<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**The permutation null is conservative by construction.** It draws *unconstrained* random subsets of the chamber. Real committees are built to roughly mirror the chamber's **party ratio**; unconstrained random subsets can be far more party-lopsided than any real committee, which inflates the spread of the null distribution. A wider null makes real committee medians look central and pushes the outlier rate *below* the 5% chance floor. The pre-registered **party-stratified null** (sampling within party delegations) is the sharper instrument and is the planned **v2**; the "not outliers" conclusion here should be read as holding *against a null deliberately tilted toward finding nothing*.</span>
-<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**The significant gap is driven by the control set, not the treatment set.** The largest displacement on the board belongs to **House Rules** (mean |displacement| `r sprintf("%.3f", rules_disp)`), which sits in the *not-predicted* group. Rules is unrepresentative because **party leadership packs it** — a party-structural effect, not a constituency-demand one. Rules was not part of the pre-registered focus, so this is an **exploratory observation, not a confirmatory finding**; it happens to widen the control set's average and thereby produce the opposite-signed significant difference.</span>
-<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a><span class="fu">## What this does and doesn't show</span></span>
-<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**One statistic, one dimension.** This tests the *median* on DW-NOMINATE dim 1 — the classic quantity. Committees can differ from the floor in variance or on issue-specific intensity without a median shift; that is out of scope for v1.</span>
-<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**The null matters.** As above, the unconstrained-random null is conservative; the party-stratified secondary (v2) is the sharper test and is pre-registered.</span>
-<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Exploratory vs. confirmatory.** The Rules/leadership observation is exploratory. The confirmatory result is the pre-registered predicted-vs-not comparison, which does not support H1.</span>
-<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Coverage ends 2022 (117th)** — the Stewart–Woon modern boundary.</span>
-<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## The one-line read</span></span>
-<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a>The committees everyone assumes are captured by narrow interests look like the floor; the one committee that looks unrepresentative here is the one leadership controls — House Rules — an exploratory observation, not a tested claim. Krehbiel-consistent, with a modern twist — and a sharper party-stratified test still to come.</span>
-<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reproduce this</span></span>
-<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/01_pull_ideology.R        <span class="co"># DW-NOMINATE, 103-117</span></span>
-<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/02_pull_committees.R      <span class="co"># Stewart-Woon rosters + delegate flags</span></span>
-<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/03_analysis.R             <span class="co"># gate, permutation test, aggregate</span></span>
-<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render report.qmd            <span class="co"># rebuild this page</span></span>
-<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="fu">## The limitation I flagged: that null is conservative</span></span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>I pre-committed to naming a weakness in v1's own terms. Its permutation null draws **unconstrained** random subsets of the chamber. But real committees are built to roughly mirror the chamber's **party ratio**; unconstrained draws can be far more party-lopsided than any real committee, which **inflates the spread of the null**. A wider null makes real committee medians look central and pushes the outlier rate *below* the 5% floor — exactly the sub-chance rate seen above. So v1's "not outliers" holds only *against a null tilted toward finding nothing*.</span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>The tell was already in v1: the single largest displacement belongs to **House Rules** (mean |displacement| `r sprintf("%.3f", rules_disp)`) — in the *control* group, unrepresentative because **leadership packs it**, a party-structural effect, not constituency demand. That is exactly the kind of party structure a party-blind null mishandles.</span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sharper test (v2): hold party composition fixed</span></span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>The pre-registered fix conditions on party. For each committee × Congress, v2 keeps the committee's **exact D/R counts** and samples *within each party* from that chamber's members of that party (10,000 draws), then takes the drawn committee's overall median. Same sample, same classification, same gate — only the null is sharpened. If v1's verdict were an artifact of a permissive null, this is where it breaks.</span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a><span class="fu">### Confirmatory conclusion: H1 is *still* not supported</span></span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>Tightening the null does not rescue the hypothesis. Under the party-stratified null the predicted-vs-not difference in overall-median outlier rate is <span class="in">`r sprintf("%+.3f", agg_v2$d_rate)`</span> (one-sided *p* = `r sprintf("%.2f", agg_v2$p_rate_onesided)`, two-sided *p* = `r sprintf("%.2f", agg_v2$p_rate_twosided)`). The pre-registered **confirmatory secondary** — the within-party delegation test, pooled across parties — agrees: the predicted set's within-party outlier rate exceeds the control set's by only `r sprintf("%+.3f", wp_all$diff)` (**two-sided *p* = `r sprintf("%.3f", wp_all$p_2sided)`**; one-sided *p* = `r sprintf("%.3f", wp_all$p_1sided)`). Reading the two-sided value as primary, that is **marginal at best and does not clear 0.05** — not evidence for H1.</span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>**The committees everyone calls captured look like their chamber at the median — under both the permissive and the sharp null.**</span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a><span class="fu">### v1 vs v2, side by side</span></span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{r v1v2}</span></span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>mk <span class="ot">&lt;-</span> <span class="cf">function</span>(a, tag) <span class="fu">tibble</span>(</span>
+<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>  <span class="at">Null =</span> tag,</span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Outlier rate (pred)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>rate_pred, <span class="dv">3</span>),</span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Outlier rate (not)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>rate_not, <span class="dv">3</span>),</span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>d_rate, <span class="dv">3</span>),</span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">p (rate, 2-sided)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>p_rate_twosided, <span class="dv">3</span>),</span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Mean |disp| (pred)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>md_pred, <span class="dv">3</span>),</span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Mean |disp| (not)</span><span class="st">`</span>  <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>md_not, <span class="dv">3</span>),</span>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ |disp|</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(a<span class="sc">$</span>d_md, <span class="dv">3</span>))</span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mk</span>(agg_v1, <span class="st">"v1 — unconstrained"</span>),</span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mk</span>(agg_v2, <span class="st">"v2 — party-stratified"</span>)</span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a>The stratified null does exactly what it should to the **rates**: flags rise (the null is narrower) — predicted `r sprintf("%.1f%%", 100*agg_v1$rate_pred)` → `r sprintf("%.1f%%", 100*agg_v2$rate_pred)` — yet the predicted set still isn't flagged *more than the control set* at conventional significance. And **mean |displacement| is identical across the rows** (predicted <span class="in">`r sprintf("%.3f", agg_v2$md_pred)`</span>, control <span class="in">`r sprintf("%.3f", agg_v2$md_not)`</span>): displacement is committee-median − chamber-median, a fixed quantity independent of the null. Only the *flagging* changes; the *magnitudes* were always this small.</span>
+<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exploratory: a party-asymmetric sort hiding under a central median</span></span>
+<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a><span class="fu">## This section is exploratory, not confirmatory</span></span>
+<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a>Everything below is **post-hoc**, surfaced by the within-party results — not a pre-registered directional prediction. It is reported as exploratory, exactly as the v1 House Rules observation was.</span>
+<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a>A central *overall* median can **mask** structure: a committee's two party delegations can each be pulled toward the extremes in ways that cancel. Split by party, the within-party effect is strong — and runs in **opposite directions** for the predicted and control sets:</span>
+<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a><span class="in">```{r wp-byparty}</span></span>
+<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a>  <span class="at">Party =</span> <span class="fu">c</span>(<span class="st">"Democrats"</span>, <span class="st">"Republicans"</span>),</span>
+<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Predicted outlier rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">c</span>(wp_D<span class="sc">$</span>rate_pred, wp_R<span class="sc">$</span>rate_pred), <span class="dv">3</span>),</span>
+<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Not-predicted outlier rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">c</span>(wp_D<span class="sc">$</span>rate_not, wp_R<span class="sc">$</span>rate_not), <span class="dv">3</span>),</span>
+<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">Δ (pred − not)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">c</span>(wp_D<span class="sc">$</span>diff, wp_R<span class="sc">$</span>diff), <span class="dv">3</span>),</span>
+<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">p (2-sided)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">c</span>(wp_D<span class="sc">$</span>p_2sided, wp_R<span class="sc">$</span>p_2sided), <span class="dv">4</span>)</span>
+<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a>On the **Democratic** side the predicted committees' delegations are outliers far more often than the control set's (`r sprintf("%+.3f", wp_D$diff)`); on the **Republican** side it reverses (`r sprintf("%+.3f", wp_R$diff)`, driven by the control set). Pooled, these largely **cancel** — which is why the confirmatory pooled test is only marginal.</span>
 <span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>Everything above regenerates from public data. Full frozen method and deviation log: <span class="co">[</span><span class="ot">`PRE_REGISTRATION.md`</span><span class="co">](PRE_REGISTRATION.md)</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>**Direction, not just rate.** Signed displacement is the committee's party-delegation median − that party's chamber-wide median (**negative = more liberal**):</span>
+<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**House Agriculture Democrats** sit *to the right* of other House Democrats — **`r sprintf("%+.3f", d_ag)`** — in **all 15 Congresses**.</span>
+<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**House Armed Services Democrats** likewise — **`r sprintf("%+.3f", d_as)`**, in <span class="in">`r sprintf("%.0f%%", 100*r_as)`</span> of Congresses.</span>
+<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>On the control side, **House Appropriations Republicans** run the *other* way — *more liberal* than other Republicans — **`r sprintf("%+.3f", d_ap)`** — a leadership/spending profile, not a constituency one.</span>
+<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a><span class="in">```{r wp-figure}</span></span>
+<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 5</span></span>
+<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a>plot_df <span class="ot">&lt;-</span> wp <span class="sc">|&gt;</span></span>
+<span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(stratum <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"R"</span>), chamber <span class="sc">==</span> <span class="st">"House"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(group, label, stratum) <span class="sc">|&gt;</span></span>
+<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">signed =</span> <span class="fu">mean</span>(displacement), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Party =</span> <span class="fu">recode</span>(stratum, <span class="at">D =</span> <span class="st">"Democratic delegation"</span>, <span class="at">R =</span> <span class="st">"Republican delegation"</span>),</span>
+<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a>         <span class="at">group =</span> <span class="fu">recode</span>(group, <span class="at">predicted =</span> <span class="st">"Predicted (constituency)"</span>,</span>
+<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a>                               <span class="at">not_predicted =</span> <span class="st">"Not predicted (control)"</span>))</span>
+<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(signed, <span class="fu">reorder</span>(label, signed), <span class="at">color =</span> group)) <span class="sc">+</span></span>
+<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="fl">0.4</span>, <span class="at">color =</span> <span class="st">"grey40"</span>) <span class="sc">+</span></span>
+<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
+<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Party) <span class="sc">+</span></span>
+<span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Predicted (constituency)"</span> <span class="ot">=</span> <span class="st">"#d95f0e"</span>,</span>
+<span id="cb8-181"><a href="#cb8-181" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"Not predicted (control)"</span> <span class="ot">=</span> <span class="st">"#2c7fb8"</span>)) <span class="sc">+</span></span>
+<span id="cb8-182"><a href="#cb8-182" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Within-party sorting the overall median hides (House, 103rd–117th)"</span>,</span>
+<span id="cb8-183"><a href="#cb8-183" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Committee party-delegation median − that party's chamber median, DW-NOMINATE dim 1. Right = more conservative."</span>,</span>
+<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Signed within-party displacement"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">color =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a>This is *not* symmetric noise: predicted committees pull their **Democratic** delegations right, and the sharpest control-set effect (Appropriations Republicans) pulls **left** for a leadership reason — the same "the control set drives any gap" pattern from v1, now visible within party.</span>
+<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a><span class="fu">## The load-bearing caveat</span></span>
+<span id="cb8-192"><a href="#cb8-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-193"><a href="#cb8-193" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a><span class="fu">## DW-NOMINATE dim 1 is general ideology, not issue-specific constituency demand</span></span>
+<span id="cb8-195"><a href="#cb8-195" aria-hidden="true" tabindex="-1"></a>v2 sharpens the **statistical null**; it does nothing for the **measurement** gap. Dim 1 is a member's overall roll-call liberal–conservative position. A committee can be genuinely constituency-captured (farm, defense, water) without its members being dim-1 extremists — and a within-party shift on dim 1 is *consistent with* constituency selection but does **not establish** it. "Agriculture Democrats are more conservative than other Democrats" is a fact about general ideology; it is suggestive of, but not proof of, a farm-district sort. Do not let "central at the median on dim 1" become "not captured," and do not let "shifted within party on dim 1" become "captured." Both overreads are wrong.</span>
+<span id="cb8-196"><a href="#cb8-196" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-197"><a href="#cb8-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-198"><a href="#cb8-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## The gate still passes (both versions)</span></span>
+<span id="cb8-199"><a href="#cb8-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-200"><a href="#cb8-200" aria-hidden="true" tabindex="-1"></a>The party-switcher ICPSR crosswalk and the ≥98% join-completeness gate carry over from v1 unchanged; the pipeline halts on any shortfall. With the crosswalk applied, all <span class="in">`r nrow(comp)`</span> chamber-Congress cells clear 98% (min <span class="in">`r sprintf("%.4f", min(comp$match_rate))`</span>). The v1 aggregate is also identical whether the crosswalk is applied or the two affected Senate cells are dropped (Δ rate <span class="in">`r sprintf("%+.3f", agg_v1_b$d_rate)`</span>), so three people cannot be driving anything.</span>
+<span id="cb8-201"><a href="#cb8-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-202"><a href="#cb8-202" aria-hidden="true" tabindex="-1"></a><span class="in">```{r completeness}</span></span>
+<span id="cb8-203"><a href="#cb8-203" aria-hidden="true" tabindex="-1"></a>comp <span class="sc">|&gt;</span></span>
+<span id="cb8-204"><a href="#cb8-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transmute</span>(<span class="at">Chamber =</span> chamber, <span class="at">Congress =</span> congress, <span class="at">Members =</span> members,</span>
+<span id="cb8-205"><a href="#cb8-205" aria-hidden="true" tabindex="-1"></a>            <span class="at">Matched =</span> matched, <span class="st">`</span><span class="at">Match rate</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(match_rate, <span class="dv">4</span>))</span>
+<span id="cb8-206"><a href="#cb8-206" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-207"><a href="#cb8-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-208"><a href="#cb8-208" aria-hidden="true" tabindex="-1"></a><span class="fu">## The one-line read</span></span>
+<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a>The committees everyone assumes are captured by narrow interests look like the floor at the median — and they *still* do once the null holds party composition fixed, so the pre-registered hypothesis is not supported under either test. What the sharper test surfaces, exploratorily, is a party-asymmetric within-party sort that cancels at the median: Agriculture and Armed Services Democrats sit to the right of their party in nearly every Congress. Consistent with constituency selection — but on general ideology, not issue demand, so it suggests rather than proves it. Krehbiel-consistent, with a modern twist.</span>
+<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reproduce this</span></span>
+<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/01_pull_ideology.R        <span class="co"># DW-NOMINATE, 103-117</span></span>
+<span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/02_pull_committees.R      <span class="co"># Stewart-Woon rosters + delegate flags</span></span>
+<span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/03_analysis.R             <span class="co"># v1: unconstrained-null test + aggregate</span></span>
+<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/04_analysis_v2.R          <span class="co"># v2: party-stratified + within-party nulls</span></span>
+<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> R/05_wp_tests_v2.R          <span class="co"># v2: within-party aggregate permutation tests</span></span>
+<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render report.qmd            <span class="co"># rebuild this page</span></span>
+<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a>Everything above regenerates from public data. Frozen methods and deviation logs: <span class="co">[</span><span class="ot">`PRE_REGISTRATION.md`</span><span class="co">](PRE_REGISTRATION.md)</span> (v1) and <span class="in">`PRE_REGISTRATION_v2.md`</span> (v2). The standalone first-pass write-up is archived at <span class="co">[</span><span class="ot">`report_v1.html`</span><span class="co">](report_v1.html)</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
