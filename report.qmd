@@ -1,6 +1,6 @@
 ---
 title: "Are the Committees Everyone Calls 'Captured' Actually Preference Outliers?"
-subtitle: "A pre-registered replication of Krehbiel (1990) on modern data — first pass and a sharper party-stratified re-test, 103rd–117th Congress"
+subtitle: "A pre-registered replication of Krehbiel (1990) on modern data: first pass and a sharper party-stratified re-test, 103rd–117th Congress"
 author: "Frank Frisbie"
 date: today
 format:
@@ -79,42 +79,42 @@ d_ap <- named_disp |> filter(label == "House Appropriations") |> pull(signed)
 
 ## The claim being tested
 
-One of the oldest ideas in the study of Congress is that committees are **captured**: Agriculture run by farm-state members, Armed Services by hawks and defense districts, the interior/lands committees by Western resource interests — each a cluster of **preference outliers** who don't look like the chamber as a whole. That's the distributive, "gains-from-trade" story (Shepsle–Weingast). Keith Krehbiel's *Are Committees Composed of Preference Outliers?* (APSR 1990) put it to a direct test and largely found **no**: committees look like the floor.
+One of the oldest ideas in the study of Congress is that committees are **captured**: Agriculture run by farm-state members, Armed Services by hawks and defense districts, the interior/lands committees by Western resource interests, each a cluster of **preference outliers** who don't look like the chamber as a whole. That's the distributive, "gains-from-trade" story (Shepsle–Weingast). Keith Krehbiel's *Are Committees Composed of Preference Outliers?* (APSR 1990) put it to a direct test and largely found **no**: committees look like the floor.
 
-This is a small, deliberately narrow, **pre-registered** replication of that measurable claim on modern data (1993–2022): **do the committees distributive theory names sit measurably off the chamber median more often than chance, and more often than a control set?** The page walks the full arc — a first pass, a limitation I flagged in advance, and the sharper re-test I pre-committed to.
+This is a small, deliberately narrow, **pre-registered** replication of that measurable claim on modern data (1993–2022): **do the committees distributive theory names sit measurably off the chamber median more often than chance, and more often than a control set?** The page walks the full arc: a first pass, a limitation I flagged in advance, and the sharper re-test I pre-committed to.
 
 ::: {.callout-note}
-## This analysis was pre-registered — twice
-The hypothesis, committee classification, sample window, and test were frozen in [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md) **before any committee–ideology join was run**. The permissive null's sharper successor — the **party-stratified** re-test below — was *named in that same document* (§7.3) and its exact construction frozen in `PRE_REGISTRATION_v2.md` **before it was run**. A result consistent with the null was committed in advance to count as a finding, not a failure.
+## This analysis was pre-registered twice
+The hypothesis, committee classification, sample window, and test were frozen in [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md) **before any committee–ideology join was run**. The permissive null's sharper successor (the **party-stratified** re-test below) was *named in that same document* (§7.3) and its exact construction frozen in `PRE_REGISTRATION_v2.md` **before it was run**. A result consistent with the null was committed in advance to count as a finding, not a failure.
 :::
 
 ## First pass (v1): committees look like the chamber
 
-The pre-registered test, for each committee × Congress: compute the committee median and the chamber median (DW-NOMINATE dim 1); run a **two-sided, 10,000-draw permutation test** — draw random chamber subsets equal in size to the committee, and flag the committee as a *median outlier* if its observed median falls outside the central 95% of the null distribution; record signed displacement (committee − chamber).
+The pre-registered test, for each committee × Congress: compute the committee median and the chamber median (DW-NOMINATE dim 1); run a **two-sided, 10,000-draw permutation test**: draw random chamber subsets equal in size to the committee, and flag the committee as a *median outlier* if its observed median falls outside the central 95% of the null distribution; record signed displacement (committee − chamber).
 
-**H1 was not supported.** The committees distributive theory says should be captured sit essentially **on top of** their chamber's median — displaced by only about **`r sprintf("%.2f", pred_absrange[1])`–`r sprintf("%.2f", pred_absrange[2])`** on the −1…+1 DW-NOMINATE scale. Across every committee and Congress in scope the test flags a median outlier only **`r sprintf("%.1f%%", 100*overall_rate)`** of the time — *below* the 5% you'd expect by chance. The predicted set is an outlier no more often than the control set (difference `r sprintf("%+.3f", agg_v1$d_rate)`, one-sided *p* = `r sprintf("%.2f", agg_v1$p_rate_onesided)`).
+**H1 was not supported.** The committees distributive theory says should be captured sit essentially **on top of** their chamber's median, displaced by only about **`r sprintf("%.2f", pred_absrange[1])`–`r sprintf("%.2f", pred_absrange[2])`** on the −1…+1 DW-NOMINATE scale. Across every committee and Congress in scope the test flags a median outlier only **`r sprintf("%.1f%%", 100*overall_rate)`** of the time, *below* the 5% you'd expect by chance. The predicted set is an outlier no more often than the control set (difference `r sprintf("%+.3f", agg_v1$d_rate)`, one-sided *p* = `r sprintf("%.2f", agg_v1$p_rate_onesided)`).
 
 ```{r figure-v1}
 make_displacement_plot(v1)
 ```
 
-*(The join was gated at ≥98% completeness per chamber-Congress before any analysis; a party-switcher ICPSR crosswalk for three members clears it. Details are in the [archived first-pass report](report_v1.html) and carry over unchanged — see "the gate still passes" below.)*
+*(The join was gated at ≥98% completeness per chamber-Congress before any analysis; a party-switcher ICPSR crosswalk for three members clears it. Details are in the [archived first-pass report](report_v1.html) and carry over unchanged. See "the gate still passes" below.)*
 
 ## The limitation I flagged: that null is conservative
 
-I pre-committed to naming a weakness in v1's own terms. Its permutation null draws **unconstrained** random subsets of the chamber. But real committees are built to roughly mirror the chamber's **party ratio**; unconstrained draws can be far more party-lopsided than any real committee, which **inflates the spread of the null**. A wider null makes real committee medians look central and pushes the outlier rate *below* the 5% floor — exactly the sub-chance rate seen above. So v1's "not outliers" holds only *against a null tilted toward finding nothing*.
+I pre-committed to naming a weakness in v1's own terms. Its permutation null draws **unconstrained** random subsets of the chamber. But real committees are built to roughly mirror the chamber's **party ratio**; unconstrained draws can be far more party-lopsided than any real committee, which **inflates the spread of the null**. A wider null makes real committee medians look central and pushes the outlier rate *below* the 5% floor, exactly the sub-chance rate seen above. So v1's "not outliers" holds only *against a null tilted toward finding nothing*.
 
-The tell was already in v1: the single largest displacement belongs to **House Rules** (mean |displacement| `r sprintf("%.3f", rules_disp)`) — in the *control* group, unrepresentative because **leadership packs it**, a party-structural effect, not constituency demand. That is exactly the kind of party structure a party-blind null mishandles.
+The tell was already in v1: the single largest displacement belongs to **House Rules** (mean |displacement| `r sprintf("%.3f", rules_disp)`): it sits in the *control* group, unrepresentative because **leadership packs it**, a party-structural effect, not constituency demand. That is exactly the kind of party structure a party-blind null mishandles.
 
 ## Sharper test (v2): hold party composition fixed
 
-The pre-registered fix conditions on party. For each committee × Congress, v2 keeps the committee's **exact D/R counts** and samples *within each party* from that chamber's members of that party (10,000 draws), then takes the drawn committee's overall median. Same sample, same classification, same gate — only the null is sharpened. If v1's verdict were an artifact of a permissive null, this is where it breaks.
+The pre-registered fix conditions on party. For each committee × Congress, v2 keeps the committee's **exact D/R counts** and samples *within each party* from that chamber's members of that party (10,000 draws), then takes the drawn committee's overall median. Same sample, same classification, same gate: only the null is sharpened. If v1's verdict were an artifact of a permissive null, this is where it breaks.
 
 ### Confirmatory conclusion: H1 is *still* not supported
 
-Tightening the null does not rescue the hypothesis. Under the party-stratified null the predicted-vs-not difference in overall-median outlier rate is `r sprintf("%+.3f", agg_v2$d_rate)` (one-sided *p* = `r sprintf("%.2f", agg_v2$p_rate_onesided)`, two-sided *p* = `r sprintf("%.2f", agg_v2$p_rate_twosided)`). The pre-registered **confirmatory secondary** — the within-party delegation test, pooled across parties — agrees: the predicted set's within-party outlier rate exceeds the control set's by only `r sprintf("%+.3f", wp_all$diff)` (**two-sided *p* = `r sprintf("%.3f", wp_all$p_2sided)`**; one-sided *p* = `r sprintf("%.3f", wp_all$p_1sided)`). Reading the two-sided value as primary, that is **marginal at best and does not clear 0.05** — not evidence for H1.
+Tightening the null does not rescue the hypothesis. Under the party-stratified null the predicted-vs-not difference in overall-median outlier rate is `r sprintf("%+.3f", agg_v2$d_rate)` (one-sided *p* = `r sprintf("%.2f", agg_v2$p_rate_onesided)`, two-sided *p* = `r sprintf("%.2f", agg_v2$p_rate_twosided)`). The pre-registered **confirmatory secondary** (the within-party delegation test, pooled across parties) agrees: the predicted set's within-party outlier rate exceeds the control set's by only `r sprintf("%+.3f", wp_all$diff)` (**two-sided *p* = `r sprintf("%.3f", wp_all$p_2sided)`**; one-sided *p* = `r sprintf("%.3f", wp_all$p_1sided)`). Reading the two-sided value as primary, that is **marginal at best and does not clear 0.05**: not evidence for H1.
 
-**The committees everyone calls captured look like their chamber at the median — under both the permissive and the sharp null.**
+**The committees everyone calls captured look like their chamber at the median, under both the permissive and the sharp null.**
 
 ### v1 vs v2, side by side
 
@@ -129,21 +129,21 @@ mk <- function(a, tag) tibble(
   `Mean |disp| (not)`  = round(a$md_not, 3),
   `Δ |disp|` = round(a$d_md, 3))
 bind_rows(
-  mk(agg_v1, "v1 — unconstrained"),
-  mk(agg_v2, "v2 — party-stratified")
+  mk(agg_v1, "v1 (unconstrained)"),
+  mk(agg_v2, "v2 (party-stratified)")
 )
 ```
 
-The stratified null does exactly what it should to the **rates**: flags rise (the null is narrower) — predicted `r sprintf("%.1f%%", 100*agg_v1$rate_pred)` → `r sprintf("%.1f%%", 100*agg_v2$rate_pred)` — yet the predicted set still isn't flagged *more than the control set* at conventional significance. And **mean |displacement| is identical across the rows** (predicted `r sprintf("%.3f", agg_v2$md_pred)`, control `r sprintf("%.3f", agg_v2$md_not)`): displacement is committee-median − chamber-median, a fixed quantity independent of the null. Only the *flagging* changes; the *magnitudes* were always this small.
+The stratified null does exactly what it should to the **rates**: flags rise (the null is narrower): predicted `r sprintf("%.1f%%", 100*agg_v1$rate_pred)` → `r sprintf("%.1f%%", 100*agg_v2$rate_pred)`. Yet the predicted set still isn't flagged *more than the control set* at conventional significance. And **mean |displacement| is identical across the rows** (predicted `r sprintf("%.3f", agg_v2$md_pred)`, control `r sprintf("%.3f", agg_v2$md_not)`): displacement is committee-median − chamber-median, a fixed quantity independent of the null. Only the *flagging* changes; the *magnitudes* were always this small.
 
 ## Exploratory: a party-asymmetric sort hiding under a central median
 
 ::: {.callout-important}
 ## This section is exploratory, not confirmatory
-Everything below is **post-hoc**, surfaced by the within-party results — not a pre-registered directional prediction. It is reported as exploratory, exactly as the v1 House Rules observation was.
+Everything below is **post-hoc**, surfaced by the within-party results, not a pre-registered directional prediction. It is reported as exploratory, exactly as the v1 House Rules observation was.
 :::
 
-A central *overall* median can **mask** structure: a committee's two party delegations can each be pulled toward the extremes in ways that cancel. Split by party, the within-party effect is strong — and runs in **opposite directions** for the predicted and control sets:
+A central *overall* median can **mask** structure: a committee's two party delegations can each be pulled toward the extremes in ways that cancel. Split by party, the within-party effect is strong, and runs in **opposite directions** for the predicted and control sets:
 
 ```{r wp-byparty}
 tibble(
@@ -155,13 +155,13 @@ tibble(
 )
 ```
 
-On the **Democratic** side the predicted committees' delegations are outliers far more often than the control set's (`r sprintf("%+.3f", wp_D$diff)`); on the **Republican** side it reverses (`r sprintf("%+.3f", wp_R$diff)`, driven by the control set). Pooled, these largely **cancel** — which is why the confirmatory pooled test is only marginal.
+On the **Democratic** side the predicted committees' delegations are outliers far more often than the control set's (`r sprintf("%+.3f", wp_D$diff)`); on the **Republican** side it reverses (`r sprintf("%+.3f", wp_R$diff)`, driven by the control set). Pooled, these largely **cancel**, which is why the confirmatory pooled test is only marginal.
 
 **Direction, not just rate.** Signed displacement is the committee's party-delegation median − that party's chamber-wide median (**negative = more liberal**):
 
-- **House Agriculture Democrats** sit *to the right* of other House Democrats — **`r sprintf("%+.3f", d_ag)`** — in **all 15 Congresses**.
-- **House Armed Services Democrats** likewise — **`r sprintf("%+.3f", d_as)`**, in `r sprintf("%.0f%%", 100*r_as)` of Congresses.
-- On the control side, **House Appropriations Republicans** run the *other* way — *more liberal* than other Republicans — **`r sprintf("%+.3f", d_ap)`** — a leadership/spending profile, not a constituency one.
+- **House Agriculture Democrats** sit *to the right* of other House Democrats (**`r sprintf("%+.3f", d_ag)`**) in **all 15 Congresses**.
+- **House Armed Services Democrats** likewise: **`r sprintf("%+.3f", d_as)`**, in `r sprintf("%.0f%%", 100*r_as)` of Congresses.
+- On the control side, **House Appropriations Republicans** run the *other* way, *more liberal* than other Republicans (**`r sprintf("%+.3f", d_ap)`**): a leadership/spending profile, not a constituency one.
 
 ```{r wp-figure}
 #| fig-height: 5
@@ -186,13 +186,13 @@ ggplot(plot_df, aes(signed, reorder(label, signed), color = group)) +
   theme(legend.position = "bottom")
 ```
 
-This is *not* symmetric noise: predicted committees pull their **Democratic** delegations right, and the sharpest control-set effect (Appropriations Republicans) pulls **left** for a leadership reason — the same "the control set drives any gap" pattern from v1, now visible within party.
+This is *not* symmetric noise: predicted committees pull their **Democratic** delegations right, and the sharpest control-set effect (Appropriations Republicans) pulls **left** for a leadership reason, the same "the control set drives any gap" pattern from v1, now visible within party.
 
 ## The load-bearing caveat
 
 ::: {.callout-warning}
 ## DW-NOMINATE dim 1 is general ideology, not issue-specific constituency demand
-v2 sharpens the **statistical null**; it does nothing for the **measurement** gap. Dim 1 is a member's overall roll-call liberal–conservative position. A committee can be genuinely constituency-captured (farm, defense, water) without its members being dim-1 extremists — and a within-party shift on dim 1 is *consistent with* constituency selection but does **not establish** it. "Agriculture Democrats are more conservative than other Democrats" is a fact about general ideology; it is suggestive of, but not proof of, a farm-district sort. Do not let "central at the median on dim 1" become "not captured," and do not let "shifted within party on dim 1" become "captured." Both overreads are wrong.
+v2 sharpens the **statistical null**; it does nothing for the **measurement** gap. Dim 1 is a member's overall roll-call liberal–conservative position. A committee can be genuinely constituency-captured (farm, defense, water) without its members being dim-1 extremists, and a within-party shift on dim 1 is *consistent with* constituency selection but does **not establish** it. "Agriculture Democrats are more conservative than other Democrats" is a fact about general ideology; it is suggestive of, but not proof of, a farm-district sort. Do not let "central at the median on dim 1" become "not captured," and do not let "shifted within party on dim 1" become "captured." Both overreads are wrong.
 :::
 
 ## The gate still passes (both versions)
@@ -207,7 +207,7 @@ comp |>
 
 ## The one-line read
 
-The committees everyone assumes are captured by narrow interests look like the floor at the median — and they *still* do once the null holds party composition fixed, so the pre-registered hypothesis is not supported under either test. What the sharper test surfaces, exploratorily, is a party-asymmetric within-party sort that cancels at the median: Agriculture and Armed Services Democrats sit to the right of their party in nearly every Congress. Consistent with constituency selection — but on general ideology, not issue demand, so it suggests rather than proves it. Krehbiel-consistent, with a modern twist.
+The committees everyone assumes are captured by narrow interests look like the floor at the median, and they *still* do once the null holds party composition fixed, so the pre-registered hypothesis is not supported under either test. What the sharper test surfaces, exploratorily, is a party-asymmetric within-party sort that cancels at the median: Agriculture and Armed Services Democrats sit to the right of their party in nearly every Congress. Consistent with constituency selection, but on general ideology, not issue demand, so it suggests rather than proves it. Krehbiel-consistent, with a modern twist.
 
 ## Reproduce this
 

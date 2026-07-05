@@ -46,12 +46,12 @@ rules_disp    <- per_comm |> filter(label == "House Rules") |> pull(mean_abs_dis
 ```
 
 ::: {.callout-note appearance="simple"}
-**Archived first-pass report.** This is the standalone v1 write-up, kept for history. The canonical, up-to-date analysis — v1 *and* the sharper party-stratified v2 test, merged into one arc — is the [main page](index.html).
+**Archived first-pass report.** This is the standalone v1 write-up, kept for history. The canonical, up-to-date analysis (v1 *and* the sharper party-stratified v2 test, merged into one arc) is the [main page](index.html).
 :::
 
 ## The claim being tested
 
-One of the oldest ideas in the study of Congress is that committees are **captured**: that Agriculture is run by farm-state members, Armed Services by hawks and defense districts, the interior/lands committees by Western resource interests — each a cluster of **preference outliers** who don't look like the chamber as a whole. That's the distributive, "gains-from-trade" story (Shepsle–Weingast). Keith Krehbiel's *Are Committees Composed of Preference Outliers?* (APSR 1990) put it to a direct test and largely found **no**: committees look like the floor.
+One of the oldest ideas in the study of Congress is that committees are **captured**: that Agriculture is run by farm-state members, Armed Services by hawks and defense districts, the interior/lands committees by Western resource interests, each a cluster of **preference outliers** who don't look like the chamber as a whole. That's the distributive, "gains-from-trade" story (Shepsle–Weingast). Keith Krehbiel's *Are Committees Composed of Preference Outliers?* (APSR 1990) put it to a direct test and largely found **no**: committees look like the floor.
 
 This is a small, deliberately narrow, **pre-registered** replication of that specific measurable claim on modern data (1993–2022): **do the committees distributive theory names sit measurably off the chamber median more often than chance, and more often than a control set?**
 
@@ -62,7 +62,7 @@ The hypothesis, the exact committee classification, the sample window, and the t
 
 ## The headline result
 
-**H1 is not supported.** The committees distributive theory says should be captured — Agriculture, Armed Services, Natural Resources / Energy, Transportation / Commerce — sit essentially **on top of** their chamber's median. Their committee medians are displaced from the floor by only about **`r sprintf("%.2f", pred_absrange[1])`–`r sprintf("%.2f", pred_absrange[2])`** on the −1…+1 DW-NOMINATE scale — tiny. Across every committee and Congress in scope, the permutation test flags a significant median outlier only **`r sprintf("%.1f%%", 100*overall_rate)`** of the time, *below* the 5% rate you'd expect by chance alone.
+**H1 is not supported.** The committees distributive theory says should be captured (Agriculture, Armed Services, Natural Resources / Energy, Transportation / Commerce) sit essentially **on top of** their chamber's median. Their committee medians are displaced from the floor by only about **`r sprintf("%.2f", pred_absrange[1])`–`r sprintf("%.2f", pred_absrange[2])`** on the −1…+1 DW-NOMINATE scale: tiny. Across every committee and Congress in scope, the permutation test flags a significant median outlier only **`r sprintf("%.1f%%", 100*overall_rate)`** of the time, *below* the 5% rate you'd expect by chance alone.
 
 This is Krehbiel's 1990 result, replicated on 2020s data: **the committees everyone assumes are captured look like the chamber.**
 
@@ -74,12 +74,12 @@ make_displacement_plot(results)
 
 Every number traces to a public source, joined on ICPSR ID × Congress:
 
-- **Committee rosters** — Stewart & Woon, *Congressional Committee Assignments* (Harvard Dataverse `congdata`): House `10.7910/DVN/XLIHUC`, Senate `10.7910/DVN/EQ6KC7`. Standing committees only; non-voting delegates excluded.
-- **Member ideology** — voteview.com `HSall_members.csv`, DW-NOMINATE 1st dimension.
+- **Committee rosters**: Stewart & Woon, *Congressional Committee Assignments* (Harvard Dataverse `congdata`): House `10.7910/DVN/XLIHUC`, Senate `10.7910/DVN/EQ6KC7`. Standing committees only; non-voting delegates excluded.
+- **Member ideology**: voteview.com `HSall_members.csv`, DW-NOMINATE 1st dimension.
 
 ### Completeness was gated before any analysis
 
-Following the discipline of the prior project, the pipeline computes the DW-NOMINATE match rate for committee members **per chamber-Congress and halts if any cell falls below 98%** — it refuses to analyze a partial join.
+Following the discipline of the prior project, the pipeline computes the DW-NOMINATE match rate for committee members **per chamber-Congress and halts if any cell falls below 98%**: it refuses to analyze a partial join.
 
 ```{r completeness}
 comp |>
@@ -87,7 +87,7 @@ comp |>
             Matched = matched, `Match rate` = round(match_rate, 4))
 ```
 
-On the first run the gate did its job and **halted**: two Senate cells (103rd, 108th) came in at 97.9%. The cause was not missing data but a **linkage convention** — voteview assigns a member who switches party a separate 90000-series ICPSR for their post-switch ideal point, which the Stewart–Woon file does not mirror. Three members were affected, all with valid scores under the other ID:
+On the first run the gate did its job and **halted**: two Senate cells (103rd, 108th) came in at 97.9%. The cause was not missing data but a **linkage convention**: voteview assigns a member who switches party a separate 90000-series ICPSR for their post-switch ideal point, which the Stewart–Woon file does not mirror. Three members were affected, all with valid scores under the other ID:
 
 ```{r crosswalk}
 ICPSR_CROSSWALK |>
@@ -96,11 +96,11 @@ ICPSR_CROSSWALK |>
             `Party switch` = switch)
 ```
 
-Mapping each to their verified voteview record is a data-linkage correction, not a researcher choice over the result (documented in the [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md) deviation log). Lloyd Bentsen (103rd) is *not* crosswalked — he resigned days into the Congress and is genuinely scoreless, so the gate correctly excludes him. With the crosswalk applied, all 30 chamber-Congress cells clear 98%. Crucially, the aggregate result below is **identical whether the crosswalk is applied or the two affected Senate-Congress cells are dropped entirely** — so three people cannot be driving anything.
+Mapping each to their verified voteview record is a data-linkage correction, not a researcher choice over the result (documented in the [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md) deviation log). Lloyd Bentsen (103rd) is *not* crosswalked: he resigned days into the Congress and is genuinely scoreless, so the gate correctly excludes him. With the crosswalk applied, all 30 chamber-Congress cells clear 98%. Crucially, the aggregate result below is **identical whether the crosswalk is applied or the two affected Senate-Congress cells are dropped entirely**, so three people cannot be driving anything.
 
 ## The test, exactly as pre-registered
 
-For each committee × Congress: compute the committee median and the chamber median (DW-NOMINATE dim 1); run a **two-sided, 10,000-draw permutation test** — draw random chamber subsets equal in size to the committee, and flag the committee as a *median outlier* if its observed median falls outside the central 95% of the null distribution of random-subset medians; record signed displacement (committee − chamber).
+For each committee × Congress: compute the committee median and the chamber median (DW-NOMINATE dim 1); run a **two-sided, 10,000-draw permutation test**: draw random chamber subsets equal in size to the committee, and flag the committee as a *median outlier* if its observed median falls outside the central 95% of the null distribution of random-subset medians; record signed displacement (committee − chamber).
 
 ### Per-committee outlier rates
 
@@ -131,26 +131,26 @@ bind_rows(
 )
 ```
 
-The predicted-outlier set is a median outlier no more often than the control set (both ≈ `r sprintf("%.1f%%", 100*agg_a$rate_pred)`; the difference is `r sprintf("%+.3f", agg_a$d_rate)`, one-sided *p* = `r sprintf("%.2f", agg_a$p_rate_onesided)` — nowhere near supporting H1).
+The predicted-outlier set is a median outlier no more often than the control set (both ≈ `r sprintf("%.1f%%", 100*agg_a$rate_pred)`; the difference is `r sprintf("%+.3f", agg_a$d_rate)`, one-sided *p* = `r sprintf("%.2f", agg_a$p_rate_onesided)`, nowhere near supporting H1).
 
 ## An honest limitation: the null is permissive
 
-The one aggregate difference that *is* significant runs **opposite** to H1: the predicted (constituency) committees are, if anything, slightly **more central** than the control set (mean |displacement| `r sprintf("%.3f", agg_a$md_pred)` vs. `r sprintf("%.3f", agg_a$md_not)`; two-sided *p* = `r sprintf("%.3f", agg_a$p_md_twosided)`). This is **not** evidence against distributive theory — it is an artifact of two things that must be named plainly:
+The one aggregate difference that *is* significant runs **opposite** to H1: the predicted (constituency) committees are, if anything, slightly **more central** than the control set (mean |displacement| `r sprintf("%.3f", agg_a$md_pred)` vs. `r sprintf("%.3f", agg_a$md_not)`; two-sided *p* = `r sprintf("%.3f", agg_a$p_md_twosided)`). This is **not** evidence against distributive theory: it is an artifact of two things that must be named plainly:
 
 1. **The permutation null is conservative by construction.** It draws *unconstrained* random subsets of the chamber. Real committees are built to roughly mirror the chamber's **party ratio**; unconstrained random subsets can be far more party-lopsided than any real committee, which inflates the spread of the null distribution. A wider null makes real committee medians look central and pushes the outlier rate *below* the 5% chance floor. The pre-registered **party-stratified null** (sampling within party delegations) is the sharper instrument and is the planned **v2**; the "not outliers" conclusion here should be read as holding *against a null deliberately tilted toward finding nothing*.
 
-2. **The significant gap is driven by the control set, not the treatment set.** The largest displacement on the board belongs to **House Rules** (mean |displacement| `r sprintf("%.3f", rules_disp)`), which sits in the *not-predicted* group. Rules is unrepresentative because **party leadership packs it** — a party-structural effect, not a constituency-demand one. Rules was not part of the pre-registered focus, so this is an **exploratory observation, not a confirmatory finding**; it happens to widen the control set's average and thereby produce the opposite-signed significant difference.
+2. **The significant gap is driven by the control set, not the treatment set.** The largest displacement on the board belongs to **House Rules** (mean |displacement| `r sprintf("%.3f", rules_disp)`), which sits in the *not-predicted* group. Rules is unrepresentative because **party leadership packs it**, a party-structural effect, not a constituency-demand one. Rules was not part of the pre-registered focus, so this is an **exploratory observation, not a confirmatory finding**; it happens to widen the control set's average and thereby produce the opposite-signed significant difference.
 
 ## What this does and doesn't show
 
-- **One statistic, one dimension.** This tests the *median* on DW-NOMINATE dim 1 — the classic quantity. Committees can differ from the floor in variance or on issue-specific intensity without a median shift; that is out of scope for v1.
+- **One statistic, one dimension.** This tests the *median* on DW-NOMINATE dim 1, the classic quantity. Committees can differ from the floor in variance or on issue-specific intensity without a median shift; that is out of scope for v1.
 - **The null matters.** As above, the unconstrained-random null is conservative; the party-stratified secondary (v2) is the sharper test and is pre-registered.
 - **Exploratory vs. confirmatory.** The Rules/leadership observation is exploratory. The confirmatory result is the pre-registered predicted-vs-not comparison, which does not support H1.
-- **Coverage ends 2022 (117th)** — the Stewart–Woon modern boundary.
+- **Coverage ends 2022 (117th)**: the Stewart–Woon modern boundary.
 
 ## The one-line read
 
-The committees everyone assumes are captured by narrow interests look like the floor; the one committee that looks unrepresentative here is the one leadership controls — House Rules — an exploratory observation, not a tested claim. Krehbiel-consistent, with a modern twist — and a sharper party-stratified test still to come.
+The committees everyone assumes are captured by narrow interests look like the floor; the one committee that looks unrepresentative here is the one leadership controls (House Rules), an exploratory observation, not a tested claim. Krehbiel-consistent, with a modern twist, and a sharper party-stratified test still to come.
 
 ## Reproduce this
 
