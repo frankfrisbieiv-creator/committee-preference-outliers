@@ -221,3 +221,7 @@ quarto render report.qmd            # rebuild this page
 ```
 
 Everything above regenerates from public data. Frozen methods and deviation logs: [`PRE_REGISTRATION.md`](PRE_REGISTRATION.md) (v1) and `PRE_REGISTRATION_v2.md` (v2). The standalone first-pass write-up is archived at [`report_v1.html`](report_v1.html).
+
+---
+
+**Cite this:** Frisbie, F. (2026). *Are the Committees Everyone Calls 'Captured' Actually Preference Outliers?* (v1.0.0). Zenodo. <https://doi.org/10.5281/zenodo.21270842>

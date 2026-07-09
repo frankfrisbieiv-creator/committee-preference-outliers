@@ -1,5 +1,7 @@
 # Are Congressional Committees Preference Outliers?
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21270842.svg)](https://doi.org/10.5281/zenodo.21270842)
+
 A small, reproducible, **pre-registered** test of the classic distributive-vs-informational question (Krehbiel, *Are Committees Composed of Preference Outliers?*, APSR 1990): are U.S. House and Senate standing committees stacked with ideological outliers relative to their parent chamber, or do they mirror it?
 
 The hypotheses, committee classification, sample window, and test were frozen in `PRE_REGISTRATION.md` **before any committee–ideology join was run**.
